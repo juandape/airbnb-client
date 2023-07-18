@@ -1,4 +1,5 @@
 import { Carousel } from '@mantine/carousel';
+import React from 'react';
 import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
 import '../styles/components/Filtercarousel.scss';
