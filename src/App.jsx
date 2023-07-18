@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Modal from "./pages/Modal";
+import RentElement from "./pages/RentElement";
+import HomeHost from "./pages/HomeHost";
+import HostingListing from "./pages/HostingListing";
+import HostForm from "./pages/HostForm";
+import HeaderHost from "./components/HeaderHost";
+import HostingListingEditing from "./pages/HostingListingEditing";
+import ClientTrips from "./pages/ClientTrips";
+import HostingReservations from "./pages/HostingReservations";
+import ConfirmationPay from "./pages/ConfirmationPay";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/modal" element={<Modal />} />
+          <Route exact path="/rent" element={<RentElement />}>
+            <Route path=":id" element={<RentElement />}>
+
+            </Route>
+          </Route>
+          <Route path="/rent/:id/confirmationPay" element={<ConfirmationPay />} />
+          <Route exact path="/becomehost" element={<HostForm />} />
+          <Route path="/hosting" element={<HeaderHost />}>
+            <Route index element={<HomeHost />} />
+            <Route path="listing" element={<HostingListing />} />
+            <Route path="reservs" element={<HostingReservations />} />
+            <Route path="editing">
+              <Route path=":id" element={<HostingListingEditing />} />
+            </Route>
+          </Route>
+          <Route path="/trips" element={<ClientTrips />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
