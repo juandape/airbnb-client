@@ -3,17 +3,17 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useMantineTheme } from "@mantine/core";
 import "../styles/components/Filtercarousel.scss";
 import ButtonFilter from "./ButtonFilter";
-import Impresionantes from "../../public/filterbar/Impresionantes.jpg";
-import Minicasas from "../../public/filterbar/Minicasas.jpg";
-import Parquesnacionales from "../../public/filterbar/Parquesnacionales.jpg";
-import Artico from "../../public/filterbar/Artico.jpg";
-import cabanas from "../../public/filterbar/cabanas.jpg";
-import Islas from "../../public/filterbar/Islas.jpg";
-import Diseno from "../../public/filterbar/Diseno.jpg";
-import campamentos from "../../public/filterbar/campamentos.jpg";
-import casasalpinas from "../../public/filterbar/casasalpinas.jpg";
-import piscinas from "../../public/filterbar/piscinas.jpg";
-import surf from "../../public/filterbar/surf.jpg";
+import Impresionantes from "/filterbar/Impresionantes.jpg?url";
+import Minicasas from "/filterbar/Minicasas.jpg?url";
+import Parquesnacionales from "/filterbar/Parquesnacionales.jpg?url";
+import Artico from "/filterbar/Artico.jpg?url";
+import cabanas from "/filterbar/cabanas.jpg?url";
+import Islas from "/filterbar/Islas.jpg?url";
+import Diseno from "/filterbar/Diseno.jpg?url";
+import campamentos from "/filterbar/campamentos.jpg?url";
+import casasalpinas from "/filterbar/casasalpinas.jpg?url";
+import piscinas from "/filterbar/piscinas.jpg?url";
+import surf from "/filterbar/surf.jpg?url";
 
 
 const data = [
@@ -108,7 +108,6 @@ const data = [
 ];
 
 function FilterCarousel() {
-  // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
