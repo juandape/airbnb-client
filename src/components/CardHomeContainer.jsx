@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const CardHomeContainer = () => {
   const dispatch = useDispatch();
-  const reservations = useSelector((state) => state.reservationReducer.show);
-  const loading = useSelector((state) => state.reservationReducer.loading);
+  const reservations = useSelector((state) => state.reservation.show);
+  const loading = useSelector((state) => state.reservation.loading);
   const token = localStorage.getItem('token');
 
   useEffect(() => {

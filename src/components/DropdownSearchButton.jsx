@@ -4,10 +4,10 @@ import { getPosts } from '../store/actions/Filter.action';
 
 const DropdownSearchButton = ({ text, styles, icon, iconText, clase }) => {
   const dispatch = useDispatch();
-  const coordinates = useSelector((state) => state.headerReducer.coordinates);
-  const dates = useSelector((state) => state.calendarReducer.dates);
-  const people = useSelector((state) => state.peopleReducer.countPeople);
-  const flexRange = useSelector((state) => state.calendarReducer.flexRange);
+  const coordinates = useSelector((state) => state.header.coordinates);
+  const dates = useSelector((state) => state.calendar.dates);
+  const people = useSelector((state) => state.people.countPeople);
+  const flexRange = useSelector((state) => state.calendar.flexRange);
 
   const handleClick = () => {
     if (coordinates.length === 0) return;

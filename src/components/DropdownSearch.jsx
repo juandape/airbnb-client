@@ -11,10 +11,10 @@ import { format } from 'date-fns';
 import { flip } from '../store/headerSlice';
 
 const DropdownSearch = () => {
-  const rentCalendar = useSelector((state) => state.calendarReducer.dates);
-  const flexRange = useSelector((state) => state.calendarReducer.flexRange);
-  const countPeople = useSelector((state) => state.peopleReducer.countPeople);
-  const location = useSelector((state) => state.headerReducer.location);
+  const rentCalendar = useSelector((state) => state.calendar.dates);
+  const flexRange = useSelector((state) => state.calendar.flexRange);
+  const countPeople = useSelector((state) => state.people.countPeople);
+  const location = useSelector((state) => state.header.location);
   const [fecha1, setFecha1] = useState(null);
   const [fecha2, setFecha2] = useState(null);
   const [totalPerson, setTotalPerson] = useState(null);

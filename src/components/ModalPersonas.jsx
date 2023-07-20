@@ -4,7 +4,7 @@ import ModalPersonasP2 from './ModalPersonasP2';
 import { useSelector } from 'react-redux';
 
 const ModalPersonas = () => {
-  const peopleState = useSelector((state) => state.peopleReducer.countPeople);
+  const peopleState = useSelector((state) => state.people.countPeople);
   return (
     <>
       <div className='container'>

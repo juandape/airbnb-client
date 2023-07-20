@@ -5,7 +5,7 @@ import { increment, decrement } from '../store/peopleSlice';
 
 const ModalPersonasP2 = ({ count, who }) => {
   const dispatch = useDispatch();
-  const peopleState = useSelector((state) => state.peopleReducer.countPeople);
+  const peopleState = useSelector((state) => state.people.countPeople);
 
   return (
     <>
