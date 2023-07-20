@@ -1,14 +1,14 @@
 import ButtonModal from './ButtonModal';
 import '../styles/components/ModalMenu.scss';
 import { useDispatch } from 'react-redux';
-import { flipMenu } from '../store/reducer/headerReducer';
+import { flipMenu } from '../store/headerSlice';
 
 const ModalMenu = () => {
   const dispatch = useDispatch();
 
   return (
     <>
-      <div className="containerMenu">
+      <div className='containerMenu'>
         <ButtonModal
           setClick={() => {
             dispatch(flipMenu('2'));

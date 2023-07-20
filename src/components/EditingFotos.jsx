@@ -1,9 +1,5 @@
-const EditingFotos = ()=>{
-    return(
-        <div>
-            FOTOS
-        </div>
-    )
-}
+const EditingFotos = () => {
+  return <div>FOTOS</div>;
+};
 
 export default EditingFotos;

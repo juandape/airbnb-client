@@ -16,7 +16,7 @@ const CardHomeClientContainer = () => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        },
+        }
       );
       setReservations(data.data.reservations);
       setLoading(false);
@@ -34,7 +34,7 @@ const CardHomeClientContainer = () => {
     return <p>loading</p>;
   }
   return (
-    <div className="CardHomeContainer">
+    <div className='CardHomeContainer'>
       {reservations.length === 0 ? (
         <h1>
           No se encontraron reservas, que esperar para programar tu primer

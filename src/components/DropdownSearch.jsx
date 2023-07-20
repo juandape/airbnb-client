@@ -8,7 +8,7 @@ import ModalLocationSearch from './ModalLocationSearch';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { format } from 'date-fns';
-import { flip } from '../store/reducer/headerReducer';
+import { flip } from '../store/headerSlice';
 
 const DropdownSearch = () => {
   const rentCalendar = useSelector((state) => state.calendarReducer.dates);

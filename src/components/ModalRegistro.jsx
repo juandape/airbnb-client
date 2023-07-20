@@ -5,7 +5,7 @@ import { Popover } from '@mantine/core';
 import { Calendar } from '@mantine/dates';
 import { format } from 'date-fns';
 import { useDispatch } from 'react-redux';
-import { flipMenu } from '../store/reducer/headerReducer';
+import { flipMenu } from '../store/headerSlice';
 const ModalRegistro = () => {
   const [calendar, setCalendar] = useState(null);
   const [userName, setUserName] = useState('');
@@ -43,7 +43,7 @@ const ModalRegistro = () => {
         };
         const { data } = await axios.post(
           `${process.env.REACT_APP_AIRBACK}/user/singup`,
-          user,
+          user
         );
         console.log(data);
         localStorage.setItem('token', data.data.token);
@@ -59,34 +59,34 @@ const ModalRegistro = () => {
 
   return (
     <>
-      <div className="containerRegistro">
+      <div className='containerRegistro'>
         <form onSubmit={handleSubmit}>
           <h1>Terminar de registrarme</h1>
           <hr />
-          <div className="wrapper">
-            <span htmlFor="name">Nombre</span>
+          <div className='wrapper'>
+            <span htmlFor='name'>Nombre</span>
             <input
               value={userName}
               onChange={(e) => {
                 setUserName(e.target.value);
               }}
-              className="loginEmail"
-              id="name"
-              type="text"
-              placeholder="Digite su nombre "
+              className='loginEmail'
+              id='name'
+              type='text'
+              placeholder='Digite su nombre '
             ></input>
           </div>
-          <div className="wrapper">
-            <span htmlFor="lastName">Apellido</span>
+          <div className='wrapper'>
+            <span htmlFor='lastName'>Apellido</span>
             <input
-              className="loginEmail"
+              className='loginEmail'
               value={userLastName}
               onChange={(e) => {
                 setUserLastName(e.target.value);
               }}
-              id="lastName"
-              type="text"
-              placeholder="Digite su apellido"
+              id='lastName'
+              type='text'
+              placeholder='Digite su apellido'
             ></input>
           </div>
           <p>
@@ -94,26 +94,26 @@ const ModalRegistro = () => {
             identificación oficial.
           </p>
           <Popover
-            width="dropdown"
-            position="bottom-end"
-            radius="xl"
-            shadow="none"
+            width='dropdown'
+            position='bottom-end'
+            radius='xl'
+            shadow='none'
             opened={openedPop}
             onChange={setOpenedPop}
           >
             <Popover.Target>
-              <div className="wrapper">
-                <span htmlFor="date">Fecha Nacimiento</span>
+              <div className='wrapper'>
+                <span htmlFor='date'>Fecha Nacimiento</span>
                 <input
                   onClick={() => {
                     setOpenedPop(true);
                   }}
                   value={userBirth}
                   onChange={() => {}}
-                  className="loginEmail"
-                  id="date"
-                  type="text"
-                  placeholder="dd/mm/yyyy"
+                  className='loginEmail'
+                  id='date'
+                  type='text'
+                  placeholder='dd/mm/yyyy'
                 ></input>
               </div>
             </Popover.Target>
@@ -132,34 +132,34 @@ const ModalRegistro = () => {
             compartiremos la fecha de tu nacimiento con otros usuarios de
             Airbnb.
           </p>
-          <div className="wrapper">
-            <span htmlFor="email">Correo electrónico</span>
+          <div className='wrapper'>
+            <span htmlFor='email'>Correo electrónico</span>
             <input
-              className="loginEmail"
+              className='loginEmail'
               value={userEmail}
               onChange={(e) => {
                 setUserEmail(e.target.value);
               }}
-              id="email"
-              type="email"
-              placeholder="correo@mail.com"
+              id='email'
+              type='email'
+              placeholder='correo@mail.com'
             ></input>
           </div>
           <p>
             Te enviaremos las confirmaciones de viaje y los recibos por correo
             electrónico.
           </p>
-          <div className="wrapper">
-            <span htmlFor="password">Contraseña</span>
+          <div className='wrapper'>
+            <span htmlFor='password'>Contraseña</span>
             <input
-              className="loginEmail"
+              className='loginEmail'
               value={userPassword}
               onChange={(e) => {
                 setUserPassword(e.target.value);
               }}
-              id="password"
-              type="password"
-              placeholder="*******"
+              id='password'
+              type='password'
+              placeholder='*******'
             ></input>
           </div>
           <p>
@@ -168,7 +168,7 @@ const ModalRegistro = () => {
             discriminación y el Suplemento de Privacidad para Colombia. También
             reconozco la Política de privacidad.
           </p>
-          <button type="submit" className="aceptarButton">
+          <button type='submit' className='aceptarButton'>
             Aceptar y Continuar
           </button>
           <p>
@@ -180,10 +180,10 @@ const ModalRegistro = () => {
           </p>
           <label>
             <input
-              className="loginEmail"
-              id="checkbox"
-              type="checkbox"
-              value=""
+              className='loginEmail'
+              id='checkbox'
+              type='checkbox'
+              value=''
             ></input>
             No quiero recibir mensajes promocionales de Airbnb.
           </label>

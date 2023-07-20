@@ -3,8 +3,8 @@ import ButtonImg from './ButtonImg';
 import axios from 'axios';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { flipMenu } from '../store/reducer/headerReducer';
-const ModalLogin = ({setExpired}) => {
+import { flipMenu } from '../store/headerSlice';
+const ModalLogin = ({ setExpired }) => {
   const dispatch = useDispatch();
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
@@ -20,17 +20,17 @@ const ModalLogin = ({setExpired}) => {
         };
         const { data } = await axios.post(
           `${process.env.REACT_APP_AIRBACK}/user/singin`,
-          user,
+          user
         );
-        console.log(data)
+        console.log(data);
 
         localStorage.setItem('token', data.data.token);
         localStorage.setItem('rol', data.data.rol);
         //  cookies.set('tokenCookie', data.data.token);
         localStorage.setItem('email', data.data.email);
-        localStorage.setItem('img',data.data.profileimg);
+        localStorage.setItem('img', data.data.profileimg);
         dispatch(flipMenu(''));
-        setExpired(false)
+        setExpired(false);
       } catch (err) {
         //console.log(err.response.status);
         err.response.status === 400
@@ -42,39 +42,39 @@ const ModalLogin = ({setExpired}) => {
 
   return (
     <>
-      <div className="containerLogin">
+      <div className='containerLogin'>
         <form onSubmit={handleSubmit}>
           <p>Iniciar sesión o registrate</p>
           <hr />
           <h1>Te damos la bienvenida a Airbnb</h1>
-          <div className="wrapper">
-            <span htmlFor="email">Correo electrónico</span>
+          <div className='wrapper'>
+            <span htmlFor='email'>Correo electrónico</span>
             <input
-              className="loginEmail"
+              className='loginEmail'
               value={userEmail}
               onChange={(e) => {
                 setUserEmail(e.target.value);
               }}
-              id="email"
-              type="email"
-              placeholder="Correo electrónico"
+              id='email'
+              type='email'
+              placeholder='Correo electrónico'
             ></input>
           </div>
-          <div className="wrapper">
-            <span htmlFor="password">Contraseña</span>
+          <div className='wrapper'>
+            <span htmlFor='password'>Contraseña</span>
             <input
-              className="loginEmail"
+              className='loginEmail'
               value={userPassword}
               onChange={(e) => {
                 setUserPassword(e.target.value);
               }}
-              id="password"
-              type="password"
-              placeholder=""
+              id='password'
+              type='password'
+              placeholder=''
             ></input>
           </div>
-          <button className="aceptarButton"> Continúa </button>
-          <div className="ButtonsLogin">
+          <button className='aceptarButton'> Continúa </button>
+          <div className='ButtonsLogin'>
             <ButtonImg
               clase={'buttonLoginType facebook'}
               texto={'Continúa con Facebook'}

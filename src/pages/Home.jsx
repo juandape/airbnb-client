@@ -1,26 +1,26 @@
-import "../styles/pages/Home.scss";
-import CardMain from "../components/CardMain";
-import ButtonMapa from "../components/ButtonMapa";
-import Footer from "../components/Footer";
-import FooterTouch from "../components/FooterToch";
-import Header from "../components/Header";
-import HeaderTouh from "../components/HeaderTouch";
-import FilterCarousel from "../components/FilterCarousel";
-import { useEffect} from "react";
-import { Skeleton } from "@mantine/core";
-import { useDispatch, useSelector} from "react-redux";
-import { getPosts } from "../store/actions/Nofilter.action";
+import '../styles/pages/Home.scss';
+import CardMain from '../components/CardMain';
+import ButtonMapa from '../components/ButtonMapa';
+import Footer from '../components/Footer';
+import FooterTouch from '../components/FooterToch';
+import Header from '../components/Header';
+import HeaderTouh from '../components/HeaderTouch';
+import FilterCarousel from '../components/FilterCarousel';
+import { useEffect } from 'react';
+import { Skeleton } from '@mantine/core';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from '../store/actions/Nofilter.action';
 
 const Home = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // const [items, setItems] = useState([]);
-  const items = useSelector(state=>state.filterReducer.post)
+  const items = useSelector((state) => state.filter.post);
   // const [loading, setLoading] = useState(true);
-  const loading = useSelector(state=>state.filterReducer.loading)
+  const loading = useSelector((state) => state.filter.loading);
   const loadingArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
-    dispatch(getPosts())
+    dispatch(getPosts());
     // eslint-disable-next-line
   }, []);
 
@@ -29,20 +29,20 @@ const Home = () => {
       <Header />
       <HeaderTouh />
       <FilterCarousel />
-      <div className="main">
+      <div className='main'>
         {loading
           ? loadingArray.map((item) => {
               return (
-                <div className="main__skeleton" key={item}>
+                <div className='main__skeleton' key={item}>
                   <Skeleton>
-                    <div className="main__skeleton__each">Loading</div>
+                    <div className='main__skeleton__each'>Loading</div>
                   </Skeleton>
                 </div>
               );
             })
-          : items.map((item) => {
+          : Object.values(items).map((item) => {
               return (
-                <div className="main__button" key={item._id}>
+                <div className='main__button' key={item._id}>
                   <CardMain item={item} />
                 </div>
               );

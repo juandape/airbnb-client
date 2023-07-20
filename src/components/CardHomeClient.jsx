@@ -1,8 +1,8 @@
-import "../styles/components/CardHomeHost.scss";
-import { Modal } from "@mantine/core";
-import { useState } from "react";
-import ModalCardHome from "./ModalCardHome";
-import ModalComment from "./ModalComment";
+import '../styles/components/CardHomeHost.scss';
+import { Modal } from '@mantine/core';
+import { useState } from 'react';
+import ModalCardHome from './ModalCardHome';
+import ModalComment from './ModalComment';
 
 const CardHomeClient = ({
   name,
@@ -22,11 +22,11 @@ const CardHomeClient = ({
   const salidaShow = new Date(salida);
 
   return (
-    <div className="CardHomeHost">
+    <div className='CardHomeHost'>
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
-        overflow="inside"
+        overflow='inside'
         styles={{
           modal: {
             width: 550,
@@ -48,7 +48,7 @@ const CardHomeClient = ({
       <Modal
         opened={openedComment}
         onClose={() => setOpenedComment(false)}
-        overflow="inside"
+        overflow='inside'
         styles={{
           modal: {
             width: 550,
@@ -63,23 +63,23 @@ const CardHomeClient = ({
         />
       </Modal>
       <button onClick={() => setOpened(true)}>
-        <div className="CardHomeHost__row">
-          <div className="CardHomeHost__column">
+        <div className='CardHomeHost__row'>
+          <div className='CardHomeHost__column'>
             <span>{name}</span>
             <span>{`${llegadaShow.toDateString().slice(4, -4)} - ${salidaShow
               .toDateString()
               .slice(4, -4)}`}</span>
-            <span className="CardHomeHost__column__ligth">{`Villa en ${location}`}</span>
+            <span className='CardHomeHost__column__ligth'>{`Villa en ${location}`}</span>
           </div>
-          <div className="CardHomeHost__row__img">
-            <img src={img} alt="profile logo"></img>
+          <div className='CardHomeHost__row__img'>
+            <img src={img} alt='profile logo'></img>
           </div>
         </div>
       </button>
-      <hr className="CardHomeHost__span"></hr>
+      <hr className='CardHomeHost__span'></hr>
       <button
         onClick={() => setOpenedComment(true)}
-        className="CardHomeHost__message"
+        className='CardHomeHost__message'
       >
         Calificar
       </button>

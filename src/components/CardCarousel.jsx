@@ -1,8 +1,8 @@
-import { Carousel } from "@mantine/carousel";
-import { useMediaQuery } from "@mantine/hooks";
-import { useMantineTheme } from "@mantine/core";
-import { useNavigate } from "react-router";
-import "../styles/components/CardCarousel.scss";
+import { Carousel } from '@mantine/carousel';
+import { useMediaQuery } from '@mantine/hooks';
+import { useMantineTheme } from '@mantine/core';
+import { useNavigate } from 'react-router';
+import '../styles/components/CardCarousel.scss';
 
 function CardCarousel(props) {
   // const data = [
@@ -20,29 +20,32 @@ function CardCarousel(props) {
 
   return (
     <Carousel
-      className="carousel__main"
+      className='carousel__main'
       slidesToScroll={1}
       withControls={mobile ? false : true}
-      breakpoints={[{ maxWidth: "sm", slideGap: "15px" }]}
+      breakpoints={[{ maxWidth: 'sm', slideGap: '15px' }]}
       withIndicators
       styles={{
         control: {
-          "&[data-inactive]": {
+          '&[data-inactive]': {
             opacity: 0,
-            cursor: "default",
+            cursor: 'default',
           },
         },
         indicator: {
           width: 6,
           height: 6,
-          borderRadius: "50%",
+          borderRadius: '50%',
         },
       }}
     >
       {data.map((item, index) => {
         return (
           <Carousel.Slide key={index}>
-            <button className="carousel__list__button__heart" onClick={()=>navigate(`/rent/${props.linkto}`)}>
+            <button
+              className='carousel__list__button__heart'
+              onClick={() => navigate(`/rent/${props.linkto}`)}
+            >
               <img src={item} alt={index} />
             </button>
           </Carousel.Slide>

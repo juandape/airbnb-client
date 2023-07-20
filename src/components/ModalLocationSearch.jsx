@@ -3,7 +3,7 @@ import { IconMapPin } from '@tabler/icons';
 import { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useJsApiLoader, GoogleMap, Marker } from '@react-google-maps/api';
-import { locate, coordinates } from '../store/reducer/headerReducer';
+import { locate, coordinates } from '../store/headerSlice';
 const ModalLocationSearch = () => {
   const dispatch = useDispatch();
   const homeLocation = useRef('');
@@ -37,7 +37,7 @@ const ModalLocationSearch = () => {
   // eslint-disable-next-line
   const autocomplete = new google.maps.places.Autocomplete(
     homeLocation.current,
-    options,
+    options
   );
   // eslint-disable-next-line
   google.maps.event.addListener(autocomplete, 'place_changed', function () {
@@ -69,18 +69,18 @@ const ModalLocationSearch = () => {
       coordinates([
         results[0].geometry.location.lat(),
         results[0].geometry.location.lng(),
-      ]),
+      ])
     );
     dispatch(locate(place.formatted_address));
   }
 
   return (
-    <div className="hostform__mapcontainer__control">
+    <div className='hostform__mapcontainer__control'>
       <Input
         ref={homeLocation}
-        type="text"
+        type='text'
         // onClick={test()}
-        placeholder="Ingresa tu ubicacion"
+        placeholder='Ingresa tu ubicacion'
         icon={<IconMapPin size={16} />}
       />
 

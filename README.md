@@ -50,7 +50,7 @@ El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades q
 - [ ] Ejecutar el proyecto en tu computador y familiarizarte con el código (debes buscar las variables de entorno necesarias para poder ejecutar tu código).
 - [x] Adicionar reglas de ESLint al proyecto (airbnb, standarjs) y correr el linter para que el codigo siga esas reglas.
 - [x] Migrar el Router a la version 6.4 y utilizar [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
-- [ ] Migrar uso de redux a redux-toolkit.
+- [x] Migrar uso de redux a redux-toolkit.
 - [x] Modificar la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules), la vista en clases.
 - [ ] Implementar pasarela de pagos Stripe
 - [ ] Modificar la carga de imagenes desde el backend haciendo uso de la libreria multer.

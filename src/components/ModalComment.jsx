@@ -47,7 +47,7 @@ const ModalComment = ({ id, set, state }) => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        },
+        }
       );
       Swal.fire({
         title: 'Muchas Gracias',
@@ -70,74 +70,74 @@ const ModalComment = ({ id, set, state }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="ContainerComment">
+        <div className='ContainerComment'>
           <h2>Califica tu experiencia</h2>
           <textarea
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            placeholder="me gusto mucho todo, 5 estrellas"
+            placeholder='me gusto mucho todo, 5 estrellas'
           ></textarea>
-          <div className="item">
+          <div className='item'>
             <label>Cleanliness:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion1}
               onChange={(e) => setCalificacion1(e.target.value)}
             ></input>
           </div>
-          <div className="item">
+          <div className='item'>
             <label>Accuracy:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion2}
               onChange={(e) => setCalificacion2(e.target.value)}
             ></input>
           </div>
-          <div className="item">
+          <div className='item'>
             <label>Communication:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion3}
               onChange={(e) => setCalificacion3(e.target.value)}
             ></input>
           </div>
-          <div className="item">
+          <div className='item'>
             <label>Location:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion4}
               onChange={(e) => setCalificacion4(e.target.value)}
             ></input>
           </div>
-          <div className="item">
+          <div className='item'>
             <label>Check-in:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion5}
               onChange={(e) => setCalificacion5(e.target.value)}
             ></input>
           </div>
-          <div className="item">
+          <div className='item'>
             <label>Value:</label>
             <input
-              min="1"
-              max="5"
+              min='1'
+              max='5'
               type={'number'}
               value={calificacion6}
               onChange={(e) => setCalificacion6(e.target.value)}
             ></input>
           </div>
-          <button className="Btn" type="submit">
+          <button className='Btn' type='submit'>
             Enviar
           </button>
         </div>
