@@ -17,6 +17,9 @@ const ModalRegistro = () => {
   //const [infoUser, setInfoUser] = useState(undefined);
   const dispatch = useDispatch();
 
+  const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
+  const url = `${BASE_URL}/user/signup`;
+
   const HandleCalendar = (e) => {
     setCalendar(e);
     if (e !== null) {
@@ -41,10 +44,7 @@ const ModalRegistro = () => {
           estadias: '',
           profileimg: '',
         };
-        const { data } = await axios.post(
-          `${process.env.REACT_APP_AIRBACK}/user/singup`,
-          user
-        );
+        const { data } = await axios.post(url, user);
         console.log(data);
         localStorage.setItem('token', data.data.token);
         //  cookies.set('tokenCookie', data.data.token);

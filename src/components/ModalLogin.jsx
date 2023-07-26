@@ -4,10 +4,15 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { flipMenu } from '../store/headerSlice';
+
+const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
+const url = `${BASE_URL}/user/signin`;
+
 const ModalLogin = ({ setExpired }) => {
   const dispatch = useDispatch();
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (userEmail === '' && userPassword === '') {
@@ -18,10 +23,7 @@ const ModalLogin = ({ setExpired }) => {
           email: userEmail,
           password: userPassword,
         };
-        const { data } = await axios.post(
-          `${process.env.REACT_APP_AIRBACK}/user/singin`,
-          user
-        );
+        const { data } = await axios.post(url, user);
         console.log(data);
 
         localStorage.setItem('token', data.data.token);
