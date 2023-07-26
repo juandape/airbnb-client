@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { flipMenu } from '../store/headerSlice';
+import Swal from 'sweetalert2';
 
 const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
 const url = `${BASE_URL}/user/signin`;
@@ -26,6 +27,12 @@ const ModalLogin = ({ setExpired }) => {
         const { data } = await axios.post(url, user);
         console.log(data);
 
+        Swal.fire({
+          icon: 'success',
+          title: 'Login exitoso',
+          text: 'Bienvenido de nuevo a AirbnbClone',
+        });
+
         localStorage.setItem('token', data.data.token);
         localStorage.setItem('rol', data.data.rol);
         //  cookies.set('tokenCookie', data.data.token);
@@ -36,8 +43,8 @@ const ModalLogin = ({ setExpired }) => {
       } catch (err) {
         //console.log(err.response.status);
         err.response.status === 400
-          ? alert('Usuario o Contraseña errada.')
-          : alert('Ups! ocurrió algo en el login');
+          ? Swal.fire('Usuario o Contraseña errada.')
+          : Swal.fire('Ups! ocurrió algo en el login');
       }
     }
   };

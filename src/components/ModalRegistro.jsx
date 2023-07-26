@@ -6,6 +6,7 @@ import { Calendar } from '@mantine/dates';
 import { format } from 'date-fns';
 import { useDispatch } from 'react-redux';
 import { flipMenu } from '../store/headerSlice';
+import Swal from 'sweetalert2';
 const ModalRegistro = () => {
   const [calendar, setCalendar] = useState(null);
   const [userName, setUserName] = useState('');
@@ -32,7 +33,7 @@ const ModalRegistro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (userEmail === '' && userPassword === '' && userName === '') {
-      alert('Por favor llene el formulario antes de continuar');
+      Swal.fire('Por favor llene el formulario antes de continuar');
     } else {
       try {
         const user = {
@@ -52,7 +53,13 @@ const ModalRegistro = () => {
 
         dispatch(flipMenu(''));
       } catch (err) {
-        alert('Ups! ocurrió algo en el login');
+        Swal.fire('Ups! ocurrió algo en el login');
+      } finally {
+        Swal.fire({
+          icon: 'success',
+          title: 'Registro exitoso',
+          text: `Bienvenido ${userName} a AirbnbClone`,
+        });
       }
     }
   };
