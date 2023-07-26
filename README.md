@@ -54,6 +54,6 @@ El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades q
 - [x] Modificar la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules), la vista en clases.
 - [ ] Implementar pasarela de pagos Stripe
 - [ ] Modificar la carga de imagenes desde el backend haciendo uso de la libreria multer.
-- [ ] Cambiar plataforma de envío de correos de nodemailer a sendgrid
+- [x] Cambiar plataforma de envío de correos de nodemailer a resend
 - [ ] Documentar backend usando swagger
 - [ ] Modificar la carpeta de componentes para que tenga el test y el componente, es decir, debes agregar test unitarios a todos los componentes.
