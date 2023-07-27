@@ -11,7 +11,7 @@ const CardHomeClientContainer = () => {
   const getReservations = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_AIRBACK}/user/`,
+        `${import.meta.env.VITE_APP_AIRBACK}/user/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

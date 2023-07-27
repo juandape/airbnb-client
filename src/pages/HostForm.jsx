@@ -56,7 +56,7 @@ const HostForm = () => {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_API_GOOGLE,
+    googleMapsApiKey: import.meta.env.VITE_APP_API_GOOGLE,
     libraries: libraries,
   });
 
@@ -229,7 +229,7 @@ const HostForm = () => {
           component='select'
           rightSection={<IconChevronDown size={14} stroke={1.5} />}
         >
-          <option value='Aapartamento'>Aapartamento</option>
+          <option value='Aapartamento'>Apartamento</option>
           <option value='Casa'>Casa</option>
           <option value='Vivienda anexa'>Vivienda anexa</option>
           <option value='Alojamiento Unico'>Alojamiento Unico</option>

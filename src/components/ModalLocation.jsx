@@ -1,4 +1,10 @@
 import '../styles/components/ModalLocation.scss';
+import map1 from '../../public/image/map1.png';
+import map2 from '../../public/image/map2.png';
+import map3 from '../../public/image/map3.png';
+import map4 from '../../public/image/map4.png';
+import map5 from '../../public/image/map5.png';
+import map6 from '../../public/image/map6.png';
 
 const ModalLocation = () => {
   return (
@@ -8,7 +14,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map1.png`}
+              src={map1}
               alt='map1'
               width='120px'
               height='120px'
@@ -19,7 +25,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map2.png`}
+              src={map2}
               alt='map2'
               width='120px'
               height='120px'
@@ -30,7 +36,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map3.png`}
+              src={map3}
               alt='map3'
               width='120px'
               height='120px'
@@ -42,7 +48,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map4.png`}
+              src={map4}
               alt='map4'
               width='120px'
               height='120px'
@@ -53,7 +59,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map5.png`}
+              src={map5}
               alt='map5'
               width='120px'
               height='120px'
@@ -64,7 +70,7 @@ const ModalLocation = () => {
         <div className='item'>
           <button>
             <img
-              src={`${process.env.PUBLIC_URL}/image/map6.png`}
+              src={map6}
               alt='map6'
               width='120px'
               height='120px'

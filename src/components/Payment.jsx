@@ -8,7 +8,7 @@ const Payment = ({ className, invoice, price, name }) => {
   };
   let params = useParams();
   var handler = window.ePayco.checkout.configure({
-    key: process.env.REACT_APP_EPAYCO_PUBLIC_KEY,
+    key: import.meta.env.VITE_APP_EPAYCO_PUBLIC_KEY,
     test: true,
   });
 

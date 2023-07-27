@@ -14,7 +14,7 @@ export const getPosts = (data) => {
     try {
       dispatch(postLoading(true));
       const res = await axios.post(
-        `${process.env.REACT_APP_AIRBACK}/homes/filter`,
+        `${import.meta.env.VITE_APP_AIRBACK}/homes/filter`,
         data
       );
       // dispatch({ type: POST_SUCCESS, payload: res.data.data })

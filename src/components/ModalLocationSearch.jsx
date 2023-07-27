@@ -12,7 +12,7 @@ const ModalLocationSearch = () => {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_API_GOOGLE,
+    googleMapsApiKey: import.meta.env.VITE_APP_API_GOOGLE,
     libraries,
   });
 

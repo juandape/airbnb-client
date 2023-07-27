@@ -22,6 +22,8 @@ const peopleSlice = createSlice({
   },
 });
 
+console.log(peopleSlice);
+
 export const { increment, decrement } = peopleSlice.actions;
 
 export default peopleSlice.reducer;
