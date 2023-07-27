@@ -16,7 +16,7 @@ export const getPosts = (data) => {
     return async (dispatch) =>{
         try{
             dispatch(postLoading(true))
-            const res = await axios.get(url1)
+            const res = await axios.get(url)
             dispatch(postSuccess(res.data))
             dispatch(postLoading(false))
         } catch(err){

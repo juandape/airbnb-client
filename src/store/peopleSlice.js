@@ -14,10 +14,14 @@ const peopleSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
-      state.countPeople[action.payload] += 1;
+      Object.keys(state.countPeople).forEach((key) => {
+        state.countPeople[key] ++
+      });
+
     },
+
     decrement: (state, action) => {
-      state.countPeople[action.payload] -= 1;
+      state.countPeople.adults --
     },
   },
 });

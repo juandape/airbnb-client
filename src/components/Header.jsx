@@ -21,6 +21,7 @@ const Header = () => {
   const headerPopover = useSelector((state) => state.header.headerPopover);
   const location = useSelector((state) => state.header.location);
   const [opened, setOpened] = useState(false);
+  console.log(countPeople)
 
   const addFechas = () => {
     let adicional_dates = '';

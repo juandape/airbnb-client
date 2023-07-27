@@ -196,11 +196,11 @@ const HostForm = () => {
 
       setFile(new DataTransfer());
       setFileDataURL([]);
-      homeType.current.value = '';
-      homePrice.current.value = '';
-      homeCap.current.value = 1;
-      homeRooms.current.value = 1;
-      homeLocation.current.value = '';
+      homeType.current.valueOf = '';
+      homePrice.current.valueOf = '';
+      homeCap.current.valueOf = 1;
+      homeRooms.current.valueOf = 1;
+      homeLocation.current.valueOf = '';
       setDataTransfer(initialAmenities);
       setLocationResult({});
       setLocationCity('');

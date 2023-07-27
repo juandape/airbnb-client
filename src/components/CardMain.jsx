@@ -35,7 +35,7 @@ const CardMain = ({ item }) => {
         onClick={() => navigate(`/rent/${item._id}`)}
       >
         <div className='main__list__button__qualy'>
-          <span className='bold'>{location.city}</span>
+          <span className='bold'>{item.city}</span>
           <div className='main__list__button__qualy__star'>
             <svg
               viewBox='0 0 32 32'
