@@ -3,16 +3,25 @@ import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
 import { useNavigate } from 'react-router';
 import '../styles/components/CardCarousel.scss';
-import a1 from '../../public/cardhome/a1.webp';
-import a2 from '../../public/cardhome/a1.webp';
-import a3 from '../../public/cardhome/a1.webp';
-import a4 from '../../public/cardhome/a1.webp';
 
 const data = [
-  a1,
-  a2,
-  a3,
-  a4
+  {
+    id: 1,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a1_k7qgok.webp',
+  },
+  {
+    id: 2,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a2_wud5dw.webp',
+  },
+  {
+    id: 3,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a3_k9poyp.webp',
+  },
+  {
+    id: 4,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a4_rxdb8u.webp',
+  },
+
 ];
 
 function CardCarousel(props) {
@@ -44,16 +53,17 @@ function CardCarousel(props) {
         },
       }}
     >
-      {data.map((item, index) => {
+      {data.map((item) => {
         return (
-          <Carousel.Slide key={index}>
+          <Carousel.Slide key={item.id}>
             <button
               className='carousel__list__button__heart'
               onClick={() => navigate(`/rent/${props.linkto}`)}
             >
-              <img src={item} />
             </button>
-          </Carousel.Slide>
+              <img src={item.image} />
+            </Carousel.Slide>
+
         );
       })}
     </Carousel>

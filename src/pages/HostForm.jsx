@@ -182,7 +182,7 @@ const HostForm = () => {
       }
 
       const res = await axios.post(
-        `${process.env.REACT_APP_AIRBACK}/homes`,
+        `${import.meta.env.VITE_APP_AIRBACK}/homes`,
         data,
         {
           headers: {

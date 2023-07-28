@@ -14,9 +14,8 @@ const peopleSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
-      Object.keys(state.countPeople).forEach((key) => {
-        state.countPeople[key] ++
-      });
+      Object.keys(state.countPeople) = action.payload
+      action.payload ++
 
     },
 
@@ -26,7 +25,7 @@ const peopleSlice = createSlice({
   },
 });
 
-console.log(peopleSlice);
+// console.log(peopleSlice);
 
 export const { increment, decrement } = peopleSlice.actions;
 
