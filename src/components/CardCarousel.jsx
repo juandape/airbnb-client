@@ -28,6 +28,7 @@ function CardCarousel(props) {
 
   const navigate = useNavigate();
   // const data = props.imagesCard;
+  // console.log(data);
 
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
@@ -60,8 +61,8 @@ function CardCarousel(props) {
               className='carousel__list__button__heart'
               onClick={() => navigate(`/rent/${props.linkto}`)}
             >
-            </button>
               <img src={item.image} />
+            </button>
             </Carousel.Slide>
 
         );

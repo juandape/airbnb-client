@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import ListingContainer from '../components/ListingContainer';
 
 const HostingReservations = () => {
-  const reservations = useSelector((state) => state.reservation.all);
-  const loading = useSelector((state) => state.reservation.loading);
+  const reservations = useSelector((state) => state.hostReservation.all);
+  const loading = useSelector((state) => state.hostReservation.loading);
 
   if (loading) {
     return <p> Loading... </p>;

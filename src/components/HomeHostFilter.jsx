@@ -6,10 +6,11 @@ import { reserveShow } from '../store/hostReservationSlice';
 
 const HomeHostFilter = () => {
   const agendadas = useSelector(
-    (state) => state.reservation.agended.length
+    (state) => state.hostReservation.agended.length
   );
+  console.log(agendadas)
   const pasadas = useSelector(
-    (state) => state.reservation.passed.length
+    (state) => state.hostReservation.passed.length
   );
   const dispatch = useDispatch();
   const text = ['Agendadas - En curso', 'Anteriores'];

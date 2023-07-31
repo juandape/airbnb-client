@@ -2,6 +2,7 @@ import HostGradient from '../components/HostGradient';
 import GoogleAdressFilter from '../components/GoogleAdressFilter';
 import '../styles/pages/HostForm.scss';
 import { useState, useRef } from 'react';
+import Swal from 'sweetalert2';
 import { Input, TransferList, NumberInput, Loader } from '@mantine/core';
 import {
   IconMapPin,
@@ -128,16 +129,16 @@ const HostForm = () => {
   new google.maps.places.Autocomplete(homeLocation.current, options);
 
   const handleChange = (event) => {
-    const imageArray = Array.from(event.target.files).map((fil) => {
-      file.items.add(fil);
-      return URL.createObjectURL(fil);
+    const imageArray = Array.from(event.target.files).map((fill) => {
+      file.items.add(fill);
+      return URL.createObjectURL(fill);
     });
 
     setFileDataURL((prevImage) => prevImage.concat(imageArray));
     event.target.value = '';
   };
 
-  const handleClcik = (image) => {
+  const handleClick = (image) => {
     setFileDataURL(
       fileDataURL.filter((item, index) => {
         if (item === image) {
@@ -157,28 +158,31 @@ const HostForm = () => {
 
       data.append('hometype', homeType.current.value);
       data.append('location', locationResult);
-      data.append('city2', locationCity);
       data.append('price', homePrice.current.value);
       data.append('capacity', homeCap.current.value);
       data.append('rooms', homeRooms.current.value);
       data.append('amenities', amenities);
       data.append('city', city.current.value);
       data.append('country', country.current.value);
+      // data.append('city2', locationCity);
 
       console.log([
-        locationResult,
         homeType.current.value,
+        locationResult,
+        locationCity,
         homePrice.current.value,
         homeCap.current.value,
         homeRooms.current.value,
         amenities,
+        city.current.value,
+        country.current.value,
         file.files,
       ]);
 
       const fileSend = file.files;
 
       for (let i = 0; i < fileSend.length; i++) {
-        data.append(`file_${i}`, fileSend[i], fileSend[i].name);
+        data.append(`files_${i}`, fileSend[i], fileSend[i].name);
       }
 
       const res = await axios.post(
@@ -189,10 +193,10 @@ const HostForm = () => {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
-      console.log(res.data);
+      console.log(res);
 
       setFile(new DataTransfer());
       setFileDataURL([]);
@@ -207,7 +211,11 @@ const HostForm = () => {
 
       navigate('/hosting');
     } catch (err) {
-      alert('Something went wrong, please review your information');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong, please review your information'
+    });
     }
   };
 
@@ -229,7 +237,7 @@ const HostForm = () => {
           component='select'
           rightSection={<IconChevronDown size={14} stroke={1.5} />}
         >
-          <option value='Aapartamento'>Apartamento</option>
+          <option value='Apartamento'>Apartamento</option>
           <option value='Casa'>Casa</option>
           <option value='Vivienda anexa'>Vivienda anexa</option>
           <option value='Alojamiento Unico'>Alojamiento Unico</option>
@@ -337,7 +345,7 @@ const HostForm = () => {
               return (
                 <div key={image} className='hostform__imgprev__card'>
                   <img src={image} alt='previe' height='200'></img>
-                  <button onClick={() => handleClcik(image)}>
+                  <button onClick={() => handleClick(image)}>
                     Delete image
                   </button>
                 </div>
