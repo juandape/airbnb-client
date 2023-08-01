@@ -9,20 +9,19 @@ const initialState = {
   },
 };
 
-console.log(initialState);
-
-
 const peopleSlice = createSlice({
   name: 'people',
   initialState,
   reducers: {
-    increment(state) {
-      state.countPeople.adults += 1;
+    increment(state, action) {
+      state.countPeople[action.payload] += 1;
     },
 
+    decrement(state, action) {
+      state.countPeople[action.payload] -= 1;
+    },
   },
 });
-
 
 export const { increment, decrement } = peopleSlice.actions;
 

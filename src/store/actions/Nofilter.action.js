@@ -1,8 +1,5 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
-const url = `${BASE_URL}/homes`;
-
 import {
     postLoading,
     postSuccess,
@@ -16,8 +13,8 @@ export const getPosts = (data) => {
     return async (dispatch) =>{
         try{
             dispatch(postLoading(true))
-            const res = await axios.get(url)
-            dispatch(postSuccess(res.data))
+            const res = await axios.get(`${import.meta.env.VITE_APP_AIRBACK}/homes`)
+            dispatch(postSuccess(res.data.data))
             dispatch(postLoading(false))
         } catch(err){
             dispatch(postError(err))

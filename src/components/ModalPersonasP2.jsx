@@ -15,7 +15,7 @@ const ModalPersonasP2 = ({ count, who }) => {
         ) : (
           <ButtonModal
             setClick={() => {
-              dispatch(decrement(count, who));
+              dispatch(decrement(who));
             }}
             clase={`roundButton `}
             texto={'-'}
@@ -28,7 +28,7 @@ const ModalPersonasP2 = ({ count, who }) => {
         (who === 'babies' && peopleState.babies < 5) ? (
           <ButtonModal
             setClick={() => {
-              dispatch(increment(count, who));
+              dispatch(increment(who));
             }}
             clase={'roundButton'}
             texto={'+'}
