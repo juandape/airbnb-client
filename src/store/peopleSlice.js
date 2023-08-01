@@ -9,23 +9,20 @@ const initialState = {
   },
 };
 
+console.log(initialState);
+
+
 const peopleSlice = createSlice({
   name: 'people',
   initialState,
   reducers: {
-    increment: (state, action) => {
-      Object.keys(state.countPeople) = action.payload
-      action.payload ++
-
+    increment(state) {
+      state.countPeople.adults += 1;
     },
 
-    decrement: (state, action) => {
-      state.countPeople.adults --
-    },
   },
 });
 
-// console.log(peopleSlice);
 
 export const { increment, decrement } = peopleSlice.actions;
 

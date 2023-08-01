@@ -100,14 +100,13 @@ const ReserveModal = ({ setOpenReserve, item, dates, guest }) => {
             </div>
             <div className='dates'>
               <div className='flexContainer'>
-                <span>Fechas</span>
+                <span>Noches</span>
                 <span>{`${nights} noches`}</span>
               </div>
 
               <div className='flexContainer'>
-                <span>{`${date1}`}</span>
-                <span>a</span>
-                <span>{`${date2}`}</span>
+                <span>Desde: {`${date1}`}</span>
+                <span>Hasta: {`${date2}`}</span>
               </div>
             </div>
 
@@ -156,13 +155,13 @@ const ReserveModal = ({ setOpenReserve, item, dates, guest }) => {
                 </div>
                 <hr className='hr1' />
                 <div className='section2'>
-                  <div className='totaltext'>Total antes de impuestos</div>
+                  <div className='totaltext'>Total a pagar</div>
                   <span className='total'>{`$${totalReserveFormat} COP`}</span>
                 </div>
-                <div className='section2 title'>
+                {/* <div className='section2 title'>
                   <div className='totaltext'>Total con el 99% de descuento</div>
                   <span className='total'>{`$${discountFormat} COP`}</span>
-                </div>
+                </div> */}
               </div>
             </div>
 

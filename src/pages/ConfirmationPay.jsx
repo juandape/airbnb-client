@@ -24,7 +24,7 @@ const ConfirmationPay = () => {
       e.preventDefault();
       console.log('reserva despues del click', reserve);
       const res = await axios.post(
-        `${pimport.meta.env.VITE_APP_AIRBACK}/reservations/create`,
+        `${import.meta.env.VITE_APP_AIRBACK}/reservations/create`,
         reserve,
         {
           headers: {
@@ -88,7 +88,7 @@ const ConfirmationPay = () => {
 
               <div className='flexContainer'>
                 <span>{`${date1.toDateString()}`}</span>
-                <span>a</span>
+                <span> hasta </span>
                 <span>{`${date2.toDateString()}`}</span>
               </div>
             </div>
