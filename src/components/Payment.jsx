@@ -48,8 +48,7 @@ const Payment = ({ className, invoice, price, name }) => {
         Swal.fire({
           icon: 'info',
           html: '<h2>Payment Successful !</h2>' +
-          `<div>${name}</div>` +
-          `<h5>Your invoice number is ${invoice}</h5>`,
+          `<div>Your reserve in ${name} is ready</div>`
         });
         navigate('/');
       }
