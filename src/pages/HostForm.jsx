@@ -14,7 +14,7 @@ import {
 import { useJsApiLoader, GoogleMap, Marker } from '@react-google-maps/api';
 import axios from 'axios';
 import { useJwt } from 'react-jwt';
-import { Navigate, useNavigate } from 'react-router';
+import { Navigate, json, useNavigate } from 'react-router';
 
 const center = { lat: 4.650176467537301, lng: -74.08958383984998 };
 const libraries = ['places'];
@@ -171,12 +171,10 @@ const HostForm = () => {
       );
       const result = await response.json();
       console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
 
-    try {
       const amenities = dataTranser[1].map((item) => item.value);
+      const imageUrls = result.map(image => image.url)
+
 
       data.append('hometype', homeType.current.value);
       data.append('location', locationResult);
@@ -186,7 +184,7 @@ const HostForm = () => {
       data.append('amenities', amenities);
       data.append('city', city.current.value);
       data.append('country', country.current.value);
-      // data.append('city2', locationCity);
+      data.append('images', imageUrls);
 
       console.log([
         homeType.current.value,

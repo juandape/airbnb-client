@@ -62,7 +62,7 @@ function CardCarousel(props) {
             {item}
           <img src={item} />
           </button>
-        </Carousel.Slide>;
+          </Carousel.Slide>;
       })}
     </Carousel>
   );
