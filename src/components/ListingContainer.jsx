@@ -17,7 +17,7 @@ const ListingContainer = ({
         <div className='listingcontainer__img__cont'>
           <img src={img} alt='imgdes'></img>
         </div>
-        <span>{user ? user : `Villa para descanso en ${location}`}</span>
+        <span>{user ? user : `Casa en ${location}`}</span>
       </div>
       <div>{`${location}`}</div>
       <div>{`${capacity}`}</div>

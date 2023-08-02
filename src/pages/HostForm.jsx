@@ -150,11 +150,33 @@ const HostForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    try {
-      e.preventDefault();
+    e.preventDefault();
+    const data = new FormData();
 
+    const fileSend = file.files;
+
+    for (let i = 0; i < fileSend.length; i++) {
+      data.append('files', fileSend[i], fileSend[i].name);
+    }
+
+    const payload = {
+      method: 'POST',
+      body: data,
+    };
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_APP_AIRBACK}/api/upload/files`,
+        payload
+      );
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+
+    try {
       const amenities = dataTranser[1].map((item) => item.value);
-      const data = new FormData();
 
       data.append('hometype', homeType.current.value);
       data.append('location', locationResult);
@@ -179,12 +201,6 @@ const HostForm = () => {
         file.files,
       ]);
 
-      const fileSend = file.files;
-
-      for (let i = 0; i < fileSend.length; i++) {
-        data.append(`files_${i}`, fileSend[i], fileSend[i].name);
-      }
-
       const res = await axios.post(
         `${import.meta.env.VITE_APP_AIRBACK}/homes`,
         data,
@@ -193,7 +209,7 @@ const HostForm = () => {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`,
           },
-        },
+        }
       );
 
       console.log(res);
@@ -214,8 +230,8 @@ const HostForm = () => {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong, please review your information'
-    });
+        text: 'Something went wrong, please review your information',
+      });
     }
   };
 

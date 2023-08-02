@@ -11,7 +11,7 @@ const Payment = ({ className, invoice, price, name }) => {
   const handleNavigate = () => {
     navigate('/confirmationPay');
   };
-  // let params = useParams();
+  let params = useParams();
   // var handler = window.ePayco.checkout.configure({
   //   key: import.meta.env.VITE_APP_EPAYCO_PUBLIC_KEY,
   //   test: true,

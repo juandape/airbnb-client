@@ -42,7 +42,7 @@ const NavBar = () => {
             navigate(`/hosting`);
           }}
         >
-          Modo anfitrion
+          Modo anfitrión
         </button>
       ) : (
         <button
@@ -51,7 +51,7 @@ const NavBar = () => {
             navigate(`/becomehost`);
           }}
         >
-          Hazte anfitrion
+          Hazte anfitrión
         </button>
       )}
 

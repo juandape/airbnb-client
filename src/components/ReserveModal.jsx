@@ -56,8 +56,8 @@ const ReserveModal = ({ setOpenReserve, item, dates, guest }) => {
     } catch (err) {
       Swal.fire({
         title: 'Error',
-        text: 'Revisa la información',
         icon: 'error',
+        text: 'Revisa la información',
         confirmButtonText: 'Perfecto',
       });
       console.log(err);
@@ -93,10 +93,10 @@ const ReserveModal = ({ setOpenReserve, item, dates, guest }) => {
         ) : (
           <form onSubmit={handleSubmit} className='reserveContainer'>
             <div className='title'>
-              <h1>Confirmar y pagar</h1>
+              <h1>Confirmar y Pagar</h1>
             </div>
             <div className='subTitle'>
-              <h2>Tu viaje</h2>
+              <h2>Tu Viaje</h2>
             </div>
             <div className='dates'>
               <div className='flexContainer'>

@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const CardMain = ({ item }) => {
   const navigate = useNavigate();
-  const { location } = item;
 
   return (
     <div className='main__list__button'>

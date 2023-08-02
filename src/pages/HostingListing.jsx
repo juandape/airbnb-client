@@ -56,7 +56,6 @@ const HostingListing = () => {
         <h1>No homes found</h1>
       ) : (
         homes.map((item, index) => {
-          return (
             <>
               <ListingContainer
                 key={index}
@@ -69,7 +68,6 @@ const HostingListing = () => {
                 id={item._id}
               />
             </>
-          );
         })
       )}
     </div>

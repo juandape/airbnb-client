@@ -2,33 +2,32 @@ import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
 import { useNavigate } from 'react-router';
+import axios from 'axios';
 import '../styles/components/CardCarousel.scss';
 
-const data = [
-  {
-    id: 1,
-    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a1_k7qgok.webp',
-  },
-  {
-    id: 2,
-    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a2_wud5dw.webp',
-  },
-  {
-    id: 3,
-    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a3_k9poyp.webp',
-  },
-  {
-    id: 4,
-    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a4_rxdb8u.webp',
-  },
+// const data = [
+//   {
+//     id: 1,
+//     image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a1_k7qgok.webp',
+//   },
+//   {
+//     id: 2,
+//     image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a2_wud5dw.webp',
+//   },
+//   {
+//     id: 3,
+//     image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a3_k9poyp.webp',
+//   },
+//   {
+//     id: 4,
+//     image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690512553/casas/a4_rxdb8u.webp',
+//   },
 
-];
+// ];
 
 function CardCarousel(props) {
-
   const navigate = useNavigate();
-  // const data = props.imagesCard;
-  // console.log(data);
+  const data = props.imagesCard;
 
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
@@ -55,17 +54,15 @@ function CardCarousel(props) {
       }}
     >
       {data.map((item) => {
-        return (
-          <Carousel.Slide key={item.id}>
-            <button
-              className='carousel__list__button__heart'
-              onClick={() => navigate(`/rent/${props.linkto}`)}
-            >
-              <img src={item.image} />
-            </button>
-            </Carousel.Slide>
-
-        );
+        <Carousel.Slide>
+          <button
+            className='carousel__list__button__heart'
+            onClick={() => navigate(`/rent/${props.linkto}`)}
+          >
+            {item}
+          <img src={item} />
+          </button>
+        </Carousel.Slide>;
       })}
     </Carousel>
   );
