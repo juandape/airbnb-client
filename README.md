@@ -55,5 +55,5 @@ El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades q
 - [x] Implementar pasarela de pagos Stripe
 - [x] Modificar la carga de imagenes desde el backend haciendo uso de la libreria multer.
 - [x] Cambiar plataforma de envío de correos de nodemailer a resend
-- [ ] Documentar backend usando swagger
+- [x] Documentar backend usando swagger
 - [ ] Modificar la carpeta de componentes para que tenga el test y el componente, es decir, debes agregar test unitarios a todos los componentes.
