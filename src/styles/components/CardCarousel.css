@@ -1,0 +1,19 @@
+.carousel__list__button__heart {
+  max-width: 100%;
+  aspect-ratio: 1.05;
+}
+.carousel__list__button__heart img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.carousel__list__button__heart:hover {
+  cursor: pointer;
+}
+
+.carousel__main {
+  display: flex;
+}/*# sourceMappingURL=CardCarousel.css.map */

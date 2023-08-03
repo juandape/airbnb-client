@@ -1,0 +1,17 @@
+.devFlex {
+  display: flex;
+}
+.devFlex .profileImg img {
+  width: 70px;
+  border-radius: 50%;
+}
+.devFlex .user {
+  margin-left: 10px;
+}
+.devFlex .user .imgFlex {
+  display: flex;
+  justify-content: space-around;
+}
+.devFlex .user .imgFlex img {
+  width: 40px;
+}/*# sourceMappingURL=devInfo.css.map */

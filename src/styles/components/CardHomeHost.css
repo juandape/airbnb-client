@@ -1,0 +1,71 @@
+.CardHomeHost {
+  display: flex;
+  flex-flow: column;
+  width: 300px;
+  border: 1px solid var(--grey-med);
+  border-radius: 20px;
+}
+.CardHomeHost__span {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--grey-med);
+}
+.CardHomeHost__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 25px;
+  font-size: 18px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.CardHomeHost__row:hover {
+  cursor: pointer;
+  background-color: var(--grey-light);
+}
+.CardHomeHost__row__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  width: 40px;
+  height: 40px;
+}
+.CardHomeHost__row__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.CardHomeHost__column {
+  display: flex;
+  flex-flow: column;
+  row-gap: 5px;
+}
+.CardHomeHost__column span {
+  display: flex;
+  justify-content: flex-start;
+}
+.CardHomeHost__column__ligth {
+  width: 200px;
+  font-family: "Cereal Light";
+  font-size: 12px;
+  color: var(--grey-text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.CardHomeHost__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.CardHomeHost__message:hover {
+  cursor: pointer;
+  background-color: var(--grey-light);
+}/*# sourceMappingURL=CardHomeHost.css.map */

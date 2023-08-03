@@ -1,0 +1,49 @@
+.hostInfoBox {
+  display: flex;
+  padding: 48px 0px 48px 0px;
+}
+
+.hostInfoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.hostInfoContainer .hostInfoFlex {
+  display: flex;
+  padding-bottom: 20px;
+}
+.hostInfoContainer .hostInfoFlex .profileImg img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.hostInfoContainer .hostInfoFlex .user {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hostInfoContainer .hostInfoFlex .user .userName .h3 {
+  font-weight: lighter;
+}
+.hostInfoContainer .hostInfoFlex .user .userRegister {
+  color: #717171;
+}
+.hostInfoContainer .hostInfoContact .contactTitle {
+  padding: 0px 0px 16px 0px;
+}
+
+.payAdviceContainer {
+  display: flex;
+  width: 35%;
+  height: auto;
+}
+.payAdviceContainer .payAdviceIcon img {
+  width: 24px;
+  height: 24px;
+}
+.payAdviceContainer .payAdviceText {
+  margin-left: 12px;
+  font-size: 12px;
+  color: #717171;
+}/*# sourceMappingURL=hostInfo.css.map */

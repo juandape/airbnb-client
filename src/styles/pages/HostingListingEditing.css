@@ -1,0 +1,70 @@
+.editing__main {
+  width: 100%;
+  padding: 30px 80px;
+  border-top: 1px solid var(--grey-med);
+}
+.editing__main__header {
+  display: flex;
+  justify-content: space-between;
+}
+.editing__main__header a {
+  border: 1px solid black;
+  padding: 7px;
+  color: black;
+  border-radius: 8px;
+}
+.editing__main__body {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
+.editing__main__body__sticky {
+  top: 50px;
+  position: sticky;
+  height: 200px;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+}
+.editing__main__body__sticky span {
+  width: 60%;
+  background-color: var(--grey-med);
+  padding: 10px;
+  border-radius: 8px;
+}
+.editing__main__body__sticky__selected {
+  border-left: 2px solid black;
+}
+.editing__main__body__info {
+  position: relative;
+  width: 70%;
+  height: 2000px;
+  background-color: red;
+}
+.editing__main__body__info__foto {
+  position: relative;
+  background-color: white;
+  top: 800px;
+}
+
+.sticky__selected__no {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--grey-text-light);
+  padding: 10px;
+  border-left: 1px solid var(--grey-med);
+}
+.sticky__selected__no:hover {
+  cursor: pointer;
+}
+
+.sticky__selected__ok {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--grey-text-light);
+  padding: 10px;
+  border-left: 2px solid black;
+}
+.sticky__selected__ok:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=HostingListingEditing.css.map */

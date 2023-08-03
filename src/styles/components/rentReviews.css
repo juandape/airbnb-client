@@ -1,0 +1,59 @@
+.reviewsContainer {
+  padding: 48px 0px;
+}
+.reviewsContainer .sectionsReviews {
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+.reviewsContainer .sectionsReviews svg {
+  height: 16px;
+  width: 16px;
+}
+.reviewsContainer .sectionsReviews span {
+  padding: 8px 8px 8px;
+}
+.reviewsContainer .sectionsReviews button {
+  font-size: 22px;
+}
+
+.reviewScore {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.reviewScore .scoreApart {
+  width: 42%;
+  margin-bottom: 16px;
+  margin-right: 8%;
+  padding: 0 8px;
+}
+.reviewScore .scoreApart .apartFlex {
+  display: flex;
+  width: 100%;
+}
+.reviewScore .scoreApart .apartName {
+  width: 70%;
+}
+.reviewScore .apartChartFlex {
+  display: flex;
+  margin-left: 12px;
+  width: 30%;
+}
+.reviewScore .apartChartFlex .chartContainer {
+  width: 75%;
+  height: 4px;
+  margin-right: 4px;
+  align-self: center;
+}
+.reviewScore .apartChartFlex .chartBox {
+  width: 100%;
+  height: 4px;
+  background: rgb(220, 221, 221);
+}
+.reviewScore .apartChartFlex .chartBox .chartSpan {
+  display: block;
+  background: black;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}/*# sourceMappingURL=rentReviews.css.map */

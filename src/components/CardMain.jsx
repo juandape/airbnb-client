@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CardMain = ({ item }) => {
   const navigate = useNavigate();
-
+console.log(item)
   return (
     <div className='main__list__button'>
       <div className='main__list__button__heart'>

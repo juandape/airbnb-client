@@ -2,7 +2,7 @@ import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
+import { Image } from '@mantine/core';
 import '../styles/components/CardCarousel.scss';
 
 // const data = [
@@ -53,17 +53,16 @@ function CardCarousel(props) {
         },
       }}
     >
-      {data.map((item) => {
-        <Carousel.Slide>
+      {data.map((item, index) => (
+        <Carousel.Slide key={index}>
           <button
             className='carousel__list__button__heart'
             onClick={() => navigate(`/rent/${props.linkto}`)}
           >
-            {item}
-          <img src={item} />
+            <Image src={item} />
           </button>
-          </Carousel.Slide>;
-      })}
+        </Carousel.Slide>
+      ))}
     </Carousel>
   );
 }

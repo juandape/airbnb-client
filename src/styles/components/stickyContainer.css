@@ -1,0 +1,256 @@
+.bannerContainer {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+.bannerContainer .styckyContainer {
+  position: sticky;
+  top: 80px;
+  height: 663px;
+  width: 372.33px;
+}
+.bannerContainer .bookContainer {
+  height: 521px;
+  /*width: 372.33px;*/
+  margin-top: 48px;
+  top: 128px;
+  border-radius: 12px;
+  border: 1px solid rgb(226, 224, 224);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px 0px;
+}
+.bannerContainer .report {
+  position: relative;
+}
+.bannerContainer .bookIt {
+  height: 473px;
+  /*width: 324.33px;*/
+  padding: 24px;
+  box-sizing: revert;
+}
+.bannerContainer .estimatePricing {
+  margin-bottom: 24px;
+  height: 52px;
+}
+.bannerContainer .estimatePricing .span1 {
+  font-weight: normal;
+  font-size: 22px;
+}
+.bannerContainer .estimatePricing .span2 {
+  font-weight: lighter;
+  font-size: 16px;
+}
+.bannerContainer .estimatePricing .rentSection {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+.bannerContainer .estimatePricing .rentSection .sectionSvg {
+  cursor: pointer;
+  padding: 8px 8px 8px 0px;
+  display: block;
+  height: 14px;
+  width: 14px;
+  fill: currentColor;
+  box-sizing: revert;
+}
+.bannerContainer .estimatePricing .rentSection .noFill {
+  padding: 8px 8px 8px 0px;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  overflow: visible;
+  box-sizing: revert;
+}
+.bannerContainer .estimatePricing .rentSection button {
+  cursor: pointer;
+  padding: 8px 8px 8px 0px;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+.bannerContainer .estimatePricing .rentSection span {
+  padding: 8px 8px 8px 0px;
+}
+.bannerContainer .light {
+  color: rgb(163, 163, 163);
+  font-size: 14px;
+  font-weight: lighter;
+}
+.bannerContainer .checkinCheckout {
+  margin-bottom: 16px;
+}
+.bannerContainer .checkContainer {
+  height: 112px;
+  /*width: 322.33px;*/
+  border-radius: 8px;
+  border: 1px solid rgb(136, 136, 136);
+  position: relative;
+  box-sizing: revert;
+}
+.bannerContainer .checkContainer .checkFlex {
+  /*display: flex;*/
+}
+.bannerContainer .checkContainer .checkBtn {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  justify-content: space-between;
+}
+.bannerContainer .checkContainer .checkBtn svg {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 4;
+  overflow: visible;
+  box-sizing: revert;
+}
+.bannerContainer .checkContainer .checkFlexI {
+  height: 56px;
+  width: 50%;
+  position: relative;
+  text-align: start;
+}
+.bannerContainer .checkContainer #i2 {
+  border-left: 1px solid rgb(136, 136, 136);
+}
+.bannerContainer .checkContainer .check {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: "Cereal Book";
+  font-weight: bold;
+  font-size: 10px;
+}
+.bannerContainer .checkContainer .checkText {
+  padding: 26px 12px 10px;
+  font-family: "Cereal Book";
+  font-size: 14px;
+}
+.bannerContainer .checkContainer .chekI {
+  border-top: 1px solid rgb(136, 136, 136);
+  /*width: 322.33px;*/
+  height: 56px;
+}
+.bannerContainer .checkContainer #guests {
+  position: absolute;
+}
+.bannerContainer .checkContainer .guestsSvg {
+  display: flex;
+  align-self: center;
+  padding-right: 12px;
+}
+.bannerContainer .reserve {
+  height: 48px;
+  width: 100%;
+}
+.bannerContainer .reserve .reserveBtn {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 56, 92);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.bannerContainer .reserve .reserveIt {
+  color: white;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: "Cereal Book";
+}
+.bannerContainer .reserve .enableBtn {
+  cursor: not-allowed;
+}
+.bannerContainer .message {
+  display: flex;
+  height: 26px;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: flex-end;
+}
+.bannerContainer .message .messageStyle {
+  font-size: 14px;
+  font-weight: lighter;
+}
+.bannerContainer .totals {
+  height: 161px;
+  width: 100%;
+  margin-top: 24px;
+}
+.bannerContainer .section1 {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bannerContainer .section1 .values {
+  display: flex;
+  justify-content: space-between;
+}
+.bannerContainer .section1 .valuesBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding-left: 0px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+}
+.bannerContainer .section1 .valuesBtn .nightValues {
+  display: flex;
+  text-align: left;
+}
+.bannerContainer .section1 .valueResult {
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 0px;
+  text-align: right;
+}
+.bannerContainer .section2 {
+  width: 100%;
+  height: 20px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.bannerContainer .report {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.bannerContainer .report .reportBtn {
+  background-color: transparent;
+  border: none;
+  width: 147px;
+  color: rgb(115, 114, 114);
+  font-size: 14px;
+}
+.bannerContainer .report .reportFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.bannerContainer .report .reportFlex svg {
+  display: block;
+  height: 16px;
+  width: 16px;
+  fill: currentColor;
+}
+
+@media (max-width: 1128px) {
+  .styckyContainer {
+    width: 95% !important;
+  }
+}/*# sourceMappingURL=stickyContainer.css.map */

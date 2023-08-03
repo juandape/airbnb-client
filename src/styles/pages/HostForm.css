@@ -1,0 +1,95 @@
+.hostform__gradient {
+  top: 60px;
+  height: 150px;
+}
+.hostform__form {
+  margin-top: 30px;
+  padding: 0px 80px;
+  padding-bottom: 80px;
+}
+.hostform__form label {
+  margin-top: 10px;
+}
+.hostform__inputtext {
+  display: none;
+}
+.hostform__h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.hostform__mapcontainer {
+  width: 100%;
+  height: 500px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+.hostform__mapcontainer__control {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hostform__mapcontainer__control Input {
+  flex-grow: 1;
+}
+.hostform__mapcontainer__control .mantine-Input-wrapper {
+  flex-grow: 1;
+}
+.hostform__mapcontainer__control button {
+  width: 150px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+.hostform__setmargin {
+  margin-bottom: 15px;
+}
+.hostform__label {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+.hostform__imgprev {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-start;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.hostform__imgprev__card {
+  display: flex;
+  flex-flow: column;
+  row-gap: 5px;
+  align-items: center;
+}
+.hostform__imgprev__card button {
+  width: 100px;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 10px;
+}
+.hostform__submit {
+  width: 200px;
+  margin-top: 30px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+.hostform__submit:hover {
+  cursor: pointer;
+}
+
+.hostform_loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=HostForm.css.map */

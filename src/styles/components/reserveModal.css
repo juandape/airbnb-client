@@ -1,0 +1,95 @@
+.modalReserveContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalReserveContainer .reserver {
+  display: flex;
+  justify-content: center;
+}
+.modalReserveContainer .reserve {
+  margin-top: 60px;
+  height: 48px;
+  width: 50%;
+}
+.modalReserveContainer .reserve .reserveBtn {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 56, 92);
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.modalReserveContainer .reserve .reserveIt {
+  color: white;
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: "Cereal Book";
+}
+.modalReserveContainer .reserve .enableBtn {
+  cursor: not-allowed;
+}
+
+.reserveContainer {
+  margin: 15px 80px 15px 80px;
+  width: 45%;
+}
+.reserveContainer .hr1 {
+  width: 100%;
+  color: rgb(216, 213, 213);
+}
+.reserveContainer .title {
+  margin-bottom: 20px;
+}
+.reserveContainer .subTitle {
+  margin-bottom: 18px;
+}
+.reserveContainer .flexContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.reserveContainer .section2 {
+  width: 100%;
+  height: 20px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.reserveContainer .totals {
+  height: 161px;
+  width: 100%;
+  margin-top: 24px;
+}
+.reserveContainer .section1 {
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reserveContainer .section1 .values {
+  display: flex;
+  justify-content: space-between;
+}
+.reserveContainer .section1 .valuesBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding-left: 0px;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+}
+.reserveContainer .section1 .valuesBtn .nightValues {
+  display: flex;
+  text-align: left;
+}
+.reserveContainer .section1 .valueResult {
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 0px;
+  text-align: right;
+}/*# sourceMappingURL=reserveModal.css.map */

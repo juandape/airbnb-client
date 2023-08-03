@@ -52,7 +52,7 @@ El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades q
 - [ ] Migrar el Router a la version 6.4 y utilizar [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
 - [x] Migrar uso de redux a redux-toolkit.
 - [x] Modificar la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules), la vista en clases.
-- [ ] Implementar pasarela de pagos Stripe
+- [x] Implementar pasarela de pagos Stripe
 - [x] Modificar la carga de imagenes desde el backend haciendo uso de la libreria multer.
 - [x] Cambiar plataforma de envío de correos de nodemailer a resend
 - [ ] Documentar backend usando swagger
