@@ -1,0 +1,17 @@
+.part1 {
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+}
+.part1 .subTitulo {
+  color: black;
+  font-weight: 800;
+  height: 20px;
+  margin: 5px;
+}
+.part1 .info {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  margin: 5px;
+}/*# sourceMappingURL=ModalPersonasP1.css.map */

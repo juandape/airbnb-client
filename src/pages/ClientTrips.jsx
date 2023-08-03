@@ -5,7 +5,7 @@ const ClientTrips = () => {
   return (
     <div>
       <Header></Header>
-      <div className="clientTripContainer">
+      <div className='clientTripContainer'>
         <h1>mis viajes</h1>
         <CardHomeClientContainer></CardHomeClientContainer>
       </div>

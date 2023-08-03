@@ -4,107 +4,97 @@ import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
 import '../styles/components/Filtercarousel.scss';
 import ButtonFilter from './ButtonFilter';
-import Impresionantes from '../../public/filterbar/Impresionantes.jpg';
-import Minicasas from '../../public/filterbar/Minicasas.jpg';
-import Parquesnacionales from '../../public/filterbar/Parquesnacionales.jpg';
-import Artico from '../../public/filterbar/Artico.jpg';
-import cabanas from '../../public/filterbar/cabanas.jpg';
-import Islas from '../../public/filterbar/Islas.jpg';
-import Diseno from '../../public/filterbar/Diseno.jpg';
-import campamentos from '../../public/filterbar/campamentos.jpg';
-import casasalpinas from '../../public/filterbar/casasalpinas.jpg';
-import piscinas from '../../public/filterbar/piscinas.jpg';
-import surf from '../../public/filterbar/surf.jpg';
 
 const data = [
   {
     description: 'Impresionantes',
-    image: Impresionantes,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Impresionantes_kvrahu.png',
   },
   {
     description: 'Minicasas',
-    image: Minicasas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Minicasas_r6lrpm.png',
   },
   {
     description: 'Parques nacionales',
-    image: Parquesnacionales,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Parquesnacionales_epjxtn.png',
   },
   {
     description: 'Artico',
-    image: Artico,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510591/filterbar/Artico_czzun2.png',
   },
   {
     description: 'Cabanas',
-    image: cabanas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/cabanas_vwlblr.png',
   },
   {
     description: 'Islas',
-    image: Islas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Islas_tk2klq.png',
   },
   {
     description: 'Diseno',
-    image: Diseno,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Diseno_gagpif.png',
   },
   {
     description: 'Campamentos',
-    image: campamentos,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/campamentos_eau8ta.png',
   },
   {
     description: 'Casas alpinas',
-    image: casasalpinas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510591/filterbar/casasalpinas_fb2zj5.png',
   },
   {
     description: 'Piscinas',
-    image: piscinas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/piscinas_bci1ka.png',
   },
   {
     description: 'Surf',
-    image: surf,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/surf_fn2h1w.png',
   },
   {
     description: 'Impresionantes',
-    image: Impresionantes,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Impresionantes_kvrahu.png',
   },
   {
     description: 'Minicasas',
-    image: Minicasas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Minicasas_r6lrpm.png',
   },
   {
     description: 'Parques nacionales',
-    image: Parquesnacionales,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Parquesnacionales_epjxtn.png',
   },
   {
-    description: 'Impresionantes',
-    image: Impresionantes,
+    description: 'Artico',
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510591/filterbar/Artico_czzun2.png',
   },
   {
     description: 'Cabanas',
-    image: cabanas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/cabanas_vwlblr.png',
   },
   {
     description: 'Islas',
-    image: Islas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Islas_tk2klq.png',
   },
   {
     description: 'Diseno',
-    image: Diseno,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/Diseno_gagpif.png',
   },
   {
     description: 'Campamentos',
-    image: campamentos,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/campamentos_eau8ta.png',
   },
   {
     description: 'Casas alpinas',
-    image: casasalpinas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510591/filterbar/casasalpinas_fb2zj5.png',
   },
   {
     description: 'Piscinas',
-    image: piscinas,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/piscinas_bci1ka.png',
   },
   {
     description: 'Surf',
-    image: surf,
+    image: 'https://res.cloudinary.com/dahm4ko9b/image/upload/v1690510592/filterbar/surf_fn2h1w.png',
   },
+
 ];
 
 function FilterCarousel() {

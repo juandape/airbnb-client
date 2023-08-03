@@ -1,18 +1,18 @@
-import "../styles/components/HostingListing.scss";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ListingContainer from "../components/ListingContainer";
+import '../styles/components/HostingListing.scss';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ListingContainer from '../components/ListingContainer';
 
 const HostingListing = () => {
   const [loading, setLoading] = useState(true);
-  const [homes, setHomes] = useState("");
-  const token = localStorage.getItem("token");
+  const [homes, setHomes] = useState('');
+  const token = localStorage.getItem('token');
 
   const getHomes = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_AIRBACK}/homes/listings`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/homes/listings`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -26,7 +26,7 @@ const HostingListing = () => {
     }
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     getHomes();
     // eslint-disable-next-line
   }, []);
@@ -36,13 +36,16 @@ const HostingListing = () => {
   }
 
   return (
-    <div className="hostlistings">
-      <div className="hostlistings__title">
+    <div className='hostlistings'>
+      <div className='hostlistings__title'>
         <h1>{`${homes.length} anuncios`}</h1>
-        <Link to="/becomehost">+ Crea un anuncio</Link>
+        <Link to='/becomehost'>+ Crea un anuncio</Link>
       </div>
-      <div className="listingcontainer" style={{color:'grey', borderTop:'none'}}>
-        <div className="listingcontainer__img">Anuncio</div>
+      <div
+        className='listingcontainer'
+        style={{ color: 'grey', borderTop: 'none' }}
+      >
+        <div className='listingcontainer__img'>Anuncio</div>
         <div>Ubicacion</div>
         <div>Capacidad</div>
         <div>Cuartos</div>
@@ -52,7 +55,7 @@ const HostingListing = () => {
       {homes.length === 0 ? (
         <h1>No homes found</h1>
       ) : (
-        homes.map((item,index) => {
+        homes.map((item, index) => {
           return (
             <>
               <ListingContainer

@@ -7,7 +7,7 @@ import { Popover } from '@mantine/core';
 import { useSelector } from 'react-redux';
 import { Modal } from '@mantine/core';
 import { useDispatch } from 'react-redux';
-import { flipMenu } from '../store/reducer/headerReducer';
+import { flipMenu } from '../store/headerSlice';
 import { useNavigate } from 'react-router-dom';
 import ModalMenu from '../components/ModalMenu';
 import ModalRegistro from '../components/ModalRegistro';
@@ -16,7 +16,7 @@ import ModalMenuLogged from '../components/ModalMenuLogged';
 
 const NavBar = () => {
   const [openedPop, setOpenedPop] = useState(false);
-  const menuPopover = useSelector((state) => state.headerReducer.menuPopover);
+  const menuPopover = useSelector((state) => state.header.menuPopover);
   const [openedPop1, setOpenedPop1] = useState(false);
   const [regisOrLogin, setregisOrLogin] = useState('');
   const dispatch = useDispatch();
@@ -34,46 +34,46 @@ const NavBar = () => {
   };
 
   return (
-    <div className="header__nav">
+    <div className='header__nav'>
       {localStorage.getItem('rol') === 'host' ? (
         <button
-          className="header__nav__button-greyHover"
+          className='header__nav__button-greyHover'
           onClick={() => {
             navigate(`/hosting`);
           }}
         >
-          Modo anfitrion
+          Modo anfitrión
         </button>
       ) : (
         <button
-          className="header__nav__button-greyHover"
+          className='header__nav__button-greyHover'
           onClick={() => {
             navigate(`/becomehost`);
           }}
         >
-          Hazte anfitrion
+          Hazte anfitrión
         </button>
       )}
 
-      <button className="header__nav__button-language-greyHover">
-        <img src={globe} alt="Globe" />
+      <button className='header__nav__button-language-greyHover'>
+        <img src={globe} alt='Globe' />
       </button>
 
       <Popover
-        width="dropdown"
-        position="bottom-end"
-        radius="xl"
-        shadow="none"
+        width='dropdown'
+        position='bottom-end'
+        radius='xl'
+        shadow='none'
         opened={openedPop}
         onChange={setOpenedPop}
       >
         <Popover.Target>
           <button
-            className="header__nav__button-account"
+            className='header__nav__button-account'
             onClick={() => setOpenedPop((o) => !o)}
           >
-            <img src={hamburger} alt="Hamburger" />
-            <img src={account} alt="Account" />
+            <img src={hamburger} alt='Hamburger' />
+            <img src={account} alt='Account' />
           </button>
         </Popover.Target>
         <Popover.Dropdown>
@@ -89,11 +89,11 @@ const NavBar = () => {
         <Modal
           opened={openedPop1}
           onClose={() => handleCloseModal()}
-          title="Iniciar sesión"
-          size="550px"
-          overflow="inside"
-          radius="xl"
-          shadow="none"
+          title='Iniciar sesión'
+          size='550px'
+          overflow='inside'
+          radius='xl'
+          shadow='none'
         >
           <ModalLogin />
         </Modal>
@@ -101,10 +101,10 @@ const NavBar = () => {
         <Modal
           opened={openedPop1}
           onClose={() => handleCloseModal()}
-          size="550px"
-          overflow="outside"
-          radius="xl"
-          shadow="none"
+          size='550px'
+          overflow='outside'
+          radius='xl'
+          shadow='none'
         >
           <ModalRegistro />
         </Modal>

@@ -1,71 +1,71 @@
-import ButtonRound from "./ButtonModal";
-import "../styles/components/CalendarSearch.scss";
-import "../styles/components/ButtonModal.scss";
-import { RangeCalendar } from "@mantine/dates";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { changeDate, changeFlexRange } from "../store/reducer/calendarReducer";
+import ButtonRound from './ButtonModal';
+import '../styles/components/CalendarSearch.scss';
+import '../styles/components/ButtonModal.scss';
+import { RangeCalendar } from '@mantine/dates';
+import { changeDate, changeFlexRange } from '../store/calendarSlice';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const CalendarSearch = () => {
   const [viewCalendar, setViewCalendar] = useState(true);
-  const rentCalendarOne = useSelector((state) => state.calendarReducer.dates);
+  const rentCalendarOne = useSelector((state) => state.calendar.dates);
 
   const dispatch = useDispatch();
 
   const [buttonRoundSelected, setButtonRoundSelected] = useState({
-    flex: "",
-    pick: "selected",
+    flex: '',
+    pick: 'selected',
   });
   const [buttonDatesRange, setButtonDatesRange] = useState({
-    normal: "selected",
-    one: "",
-    three: "",
-    seven: "",
+    normal: 'selected',
+    one: '',
+    three: '',
+    seven: '',
   });
   const handleClickType = (who) => {
-    if (who === "pick") {
+    if (who === 'pick') {
       setButtonRoundSelected({
-        flex: "",
-        pick: "selected",
+        flex: '',
+        pick: 'selected',
       });
       setViewCalendar(true);
     } else {
       setButtonRoundSelected({
-        flex: "selected",
-        pick: "",
+        flex: 'selected',
+        pick: '',
       });
       setViewCalendar(false);
     }
   };
 
   const handleClickDate = (who) => {
-    if (who === "normal") {
+    if (who === 'normal') {
       setButtonDatesRange({
-        normal: "selected",
-        one: "",
-        three: "",
-        seven: "",
+        normal: 'selected',
+        one: '',
+        three: '',
+        seven: '',
       });
-    } else if (who === "one") {
+    } else if (who === 'one') {
       setButtonDatesRange({
-        normal: "",
-        one: "selected",
-        three: "",
-        seven: "",
+        normal: '',
+        one: 'selected',
+        three: '',
+        seven: '',
       });
-    } else if (who === "three") {
+    } else if (who === 'three') {
       setButtonDatesRange({
-        normal: "",
-        one: "",
-        three: "selected",
-        seven: "",
+        normal: '',
+        one: '',
+        three: 'selected',
+        seven: '',
       });
-    } else if (who === "seven") {
+    } else if (who === 'seven') {
       setButtonDatesRange({
-        normal: "",
-        one: "",
-        three: "",
-        seven: "selected",
+        normal: '',
+        one: '',
+        three: '',
+        seven: 'selected',
       });
     }
     dispatch(changeFlexRange(who));
@@ -73,16 +73,16 @@ const CalendarSearch = () => {
 
   return (
     <div>
-      <div className="containerMapa">
-        <div className="itemCalendario">
-          <div className="itemSelector">
+      <div className='containerMapa'>
+        <div className='itemCalendario'>
+          <div className='itemSelector'>
             <ButtonRound
               setClick={() => {
-                handleClickType("pick");
+                handleClickType('pick');
               }}
-              clase={"dateButtonType"}
+              clase={'dateButtonType'}
               selected={`${buttonRoundSelected.pick}`}
-              texto={"Elige las fechas"}
+              texto={'Elige las fechas'}
             />
           </div>
         </div>
@@ -90,7 +90,7 @@ const CalendarSearch = () => {
           <div className={`mutablePick`}>
             <div>
               <RangeCalendar
-                className="RangeCalendarModal"
+                className='RangeCalendarModal'
                 minDate={new Date()}
                 amountOfMonths={2}
                 value={rentCalendarOne}
@@ -99,25 +99,25 @@ const CalendarSearch = () => {
                 }}
                 styles={(theme) => ({
                   day: {
-                    "&[data-selected]": {
+                    '&[data-selected]': {
                       backgroundColor: theme.colors.dark[4],
                       borderRadius: 100,
-                      position: "relative",
+                      position: 'relative',
                     },
 
-                    "&[data-in-range]": {
+                    '&[data-in-range]': {
                       backgroundColor: theme.colors.gray[2],
                     },
 
-                    "&[data-first-in-range]": {
+                    '&[data-first-in-range]': {
                       backgroundColor: theme.colors.dark[4],
                       borderRadius: 100,
-                      position: "relative",
+                      position: 'relative',
 
-                      "&::after": {
+                      '&::after': {
                         content: '""',
                         backgroundColor: theme.colors.gray[2],
-                        position: "absolute",
+                        position: 'absolute',
                         right: 0,
                         left: 20,
                         top: 0,
@@ -126,13 +126,13 @@ const CalendarSearch = () => {
                       },
                     },
 
-                    "&[data-last-in-range]": {
+                    '&[data-last-in-range]': {
                       backgroundColor: theme.colors.dark[4],
                       borderRadius: 100,
-                      "&::after": {
+                      '&::after': {
                         content: '""',
                         backgroundColor: theme.colors.gray[2],
-                        position: "absolute",
+                        position: 'absolute',
                         left: 0,
                         right: 20,
                         top: 0,
@@ -144,56 +144,56 @@ const CalendarSearch = () => {
                 })}
               />
             </div>
-            <div className="itemCalendario">
+            <div className='itemCalendario'>
               <ButtonRound
                 setClick={() => {
-                  handleClickDate("normal");
+                  handleClickDate('normal');
                 }}
-                clase={"dateButton"}
+                clase={'dateButton'}
                 selected={`${buttonDatesRange.normal}`}
-                texto={"Fechas exactas"}
+                texto={'Fechas exactas'}
               />
               <ButtonRound
                 setClick={() => {
-                  handleClickDate("one");
+                  handleClickDate('one');
                 }}
-                clase={"dateButton"}
+                clase={'dateButton'}
                 selected={`${buttonDatesRange.one}`}
-                texto={"± 1 día"}
+                texto={'± 1 día'}
               />
               <ButtonRound
                 setClick={() => {
-                  handleClickDate("three");
+                  handleClickDate('three');
                 }}
-                clase={"dateButton"}
+                clase={'dateButton'}
                 selected={`${buttonDatesRange.three}`}
-                texto={"± 3 días"}
+                texto={'± 3 días'}
               />
               <ButtonRound
                 setClick={() => {
-                  handleClickDate("seven");
+                  handleClickDate('seven');
                 }}
-                clase={"dateButton"}
+                clase={'dateButton'}
                 selected={`${buttonDatesRange.seven}`}
-                texto={"± 7 días"}
+                texto={'± 7 días'}
               />
             </div>
           </div>
         ) : (
           <div className={`mutableFlex`}>
             <p>¿Cuánto tiempo quieres quedarte?</p>
-            <div className="itemSelector">
+            <div className='itemSelector'>
               <ButtonRound
-                clase={"dateButton"}
-                selected={""}
-                texto={"Fin de semana"}
+                clase={'dateButton'}
+                selected={''}
+                texto={'Fin de semana'}
               />
               <ButtonRound
-                clase={"dateButton"}
-                selected={"selected"}
-                texto={"Semana"}
+                clase={'dateButton'}
+                selected={'selected'}
+                texto={'Semana'}
               />
-              <ButtonRound clase={"dateButton"} selected={""} texto={"Mes"} />
+              <ButtonRound clase={'dateButton'} selected={''} texto={'Mes'} />
             </div>
             <p>¿Cuándo quieres ir?¿Cuándo quieres ir?</p>
           </div>

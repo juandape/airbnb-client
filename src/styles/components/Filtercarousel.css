@@ -1,0 +1,53 @@
+.container__carousel {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  align-items: center;
+  position: fixed;
+  top: 80px;
+  padding: var(--padding-main);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: white;
+  z-index: 2;
+}
+
+.filter__carousel {
+  width: 100%;
+  overflow: hidden;
+}
+.filter__carousel__item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  row-gap: 8px;
+  background-color: transparent;
+  font-size: 12px;
+  color: rgb(185, 179, 179);
+}
+.filter__carousel__item img {
+  height: 24px;
+  width: 24px;
+}
+.filter__carousel__item span {
+  padding-bottom: 3px;
+}
+.filter__carousel__item:hover {
+  cursor: pointer;
+}
+.filter__carousel__item:hover span {
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 743px) {
+  .container__carousel {
+    padding: 0 24px;
+    padding-top: 20px;
+  }
+}/*# sourceMappingURL=Filtercarousel.css.map */

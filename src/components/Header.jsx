@@ -13,16 +13,15 @@ import { useSelector } from 'react-redux';
 import { format } from 'date-fns';
 
 const Header = () => {
-  const rentCalendar = useSelector((state) => state.calendarReducer.dates);
-  const flexRange = useSelector((state) => state.calendarReducer.flexRange);
-  const countPeople = useSelector((state) => state.peopleReducer.countPeople);
+  const rentCalendar = useSelector((state) => state.calendar.dates);
+  const flexRange = useSelector((state) => state.calendar.flexRange);
+  const countPeople = useSelector((state) => state.people.countPeople);
   const [fechas, setFechas] = useState(null);
   const [totalPerson, setTotalPerson] = useState(null);
-  const headerPopover = useSelector(
-    (state) => state.headerReducer.headerPopover,
-  );
-  const location = useSelector((state) => state.headerReducer.location);
+  const headerPopover = useSelector((state) => state.header.headerPopover);
+  const location = useSelector((state) => state.header.location);
   const [opened, setOpened] = useState(false);
+  // console.log(countPeople)
 
   const addFechas = () => {
     let adicional_dates = '';
@@ -75,21 +74,21 @@ const Header = () => {
 
   return (
     <div>
-      <header className="header">
-        <Link to="/" className="header__logo">
-          <img src={logo} alt="logo" />
-          <img src={soloLogo} alt="logo" />
+      <header className='header'>
+        <Link to='/' className='header__logo'>
+          <img src={logo} alt='logo' />
+          <img src={soloLogo} alt='logo' />
         </Link>
         <Popover
           width={'100%'}
           opened={opened}
           onChange={setOpened}
-          transition="scale-y"
+          transition='scale-y'
         >
           <Popover.Target>
             <button
               onClick={() => setOpened((o) => !o)}
-              className="toggle"
+              className='toggle'
               style={{
                 visibility: opened ? 'hidden' : 'visible',
                 width: opened ? '0px' : 'auto',

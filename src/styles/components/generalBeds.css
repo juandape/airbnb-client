@@ -1,0 +1,39 @@
+.generalBeds {
+  padding: 48px 0px;
+}
+.generalBeds .bedsText {
+  padding-bottom: 24px;
+}
+.generalBeds .bedsText h2 {
+  font-size: 22px;
+  font-weight: lighter;
+}
+.generalBeds .bedsFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.generalBeds .bedsFlex .bedCard {
+  min-height: 143px;
+  min-width: 207.11px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+}
+.generalBeds .bedsFlex .bedCard .bedIcons {
+  margin-bottom: 16px;
+}
+.generalBeds .bedsFlex .bedCard .bedIcons .bedSvg {
+  margin-right: 8px;
+}
+.generalBeds .bedsFlex .bedCard .bedIcons svg {
+  height: 24px;
+  width: 24px;
+}
+.generalBeds .bedsFlex .bedCard .bedroom {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.generalBeds .bedsFlex .bedCard .bedDesc {
+  font-size: 14px;
+  font-weight: lighter;
+}/*# sourceMappingURL=generalBeds.css.map */

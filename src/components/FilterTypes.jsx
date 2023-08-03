@@ -2,7 +2,6 @@
 // import ButtonFilter from './ButtonFilter';
 // import flecha from '../styles/icons/chevronRight.svg'
 
-
 // const FilterTypes = ()=>{
 
 //     const names = ['Impresionantes', 'Minicasas','Parques nacionales','Artico','Cabanas','Islas','Campamentos','Casas Alpinas','Diseno',
@@ -16,7 +15,7 @@
 //         rObj['file'] = filterImages(path)
 //         return rObj
 //     })
-    
+
 //     return(
 //         <div className='header__touch'>
 //             <div className="header__touch__types">
@@ -44,6 +43,5 @@
 //         </div>
 //     )
 // }
-
 
 // export default FilterTypes

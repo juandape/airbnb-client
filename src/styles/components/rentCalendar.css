@@ -1,0 +1,39 @@
+.rentCalendar {
+  padding: 48px 0px;
+}
+.rentCalendar .dateTitle {
+  font-size: 22px;
+}
+.rentCalendar .dateHeader {
+  height: 40px;
+  padding: 8px 0px 0px;
+}
+
+.rentCalendarBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  padding: 0px 34px;
+}
+.rentCalendarBtns .clearDate {
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.rentCalendarBtns .clearDate:hover {
+  background-color: rgb(235, 232, 232);
+}
+.rentCalendarBtns .amenitiesElement .ameElemFlex {
+  padding-bottom: 0px;
+}
+.rentCalendarBtns .amenitiesElement .ameElemFlex svg {
+  height: 24px;
+  width: 24px;
+  fill: currentcolor;
+  margin-right: 16px;
+}
+.rentCalendarBtns .amenitiesElement .ameElemFlex .amenitie {
+  font-size: 16px;
+  font-weight: lighter;
+}/*# sourceMappingURL=rentCalendar.css.map */

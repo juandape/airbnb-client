@@ -1,24 +1,24 @@
-import "../styles/pages/HostingListingEditing.scss";
-import { useParams } from "react-router";
-import { useState, useEffect, useRef} from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import EditingFotos from "../components/EditingFotos";
-import useOnScreen from "../components/UseonScreen";
+import '../styles/pages/HostingListingEditing.scss';
+import { useParams } from 'react-router';
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import EditingFotos from '../components/EditingFotos';
+import useOnScreen from '../components/UseonScreen';
 
-const basic = ["Fotos", "Precio", "Capacidad", "Cuartos"];
+const basic = ['Fotos', 'Precio', 'Capacidad', 'Cuartos'];
 
 const HostingListingEditing = () => {
   const params = useParams();
   const [home, setHome] = useState({});
   const [loading, setLoading] = useState(true);
   const fotos = useRef();
-  const visible = useOnScreen(fotos)
+  const visible = useOnScreen(fotos);
 
   const getHome = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_AIRBACK}/homes/${params.id}`
+        `${import.meta.env.VITE_APP_AIRBACK}/api/homes/${params.id}`
       );
       setHome(data.data);
       setLoading(false);
@@ -36,35 +36,40 @@ const HostingListingEditing = () => {
     window.scroll({
       top: ref.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   return (
-    <div className="editing__main">
-      <div className="editing__main__header">
-        <h1>{loading?'Searching':`Villa para diversion y descanso en ${home.location.city}`}</h1>
+    <div className='editing__main'>
+      <div className='editing__main__header'>
+        <h1>
+          {loading
+            ? 'Searching'
+            : `Villa para diversion y descanso en ${home.location.city}`}
+        </h1>
         <Link to={`/rent/${params.id}`}>Vista previa del anuncio</Link>
       </div>
-      <div className="editing__main__body">
-        <div className="editing__main__body__sticky">
+      <div className='editing__main__body'>
+        <div className='editing__main__body__sticky'>
           <span>Detalles del anuncio</span>
           {basic.map((item, index) => {
             return (
               <button
                 key={index}
-                className={visible?  "sticky__selected__ok":"sticky__selected__no"}
+                className={
+                  visible ? 'sticky__selected__ok' : 'sticky__selected__no'
+                }
                 onClick={() => handleScroll(fotos.current)}
               >
                 {item}
               </button>
             );
           })}
-          <div>
-          </div>
+          <div></div>
         </div>
-        <div className="editing__main__body__info">
-          <div ref={fotos} className="editing__main__body__info__foto">  
+        <div className='editing__main__body__info'>
+          <div ref={fotos} className='editing__main__body__info__foto'>
             <EditingFotos />
           </div>
         </div>

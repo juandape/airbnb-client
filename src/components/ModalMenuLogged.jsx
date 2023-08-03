@@ -1,7 +1,7 @@
 import ButtonModal from './ButtonModal';
 import '../styles/components/ModalMenu.scss';
 import { useDispatch } from 'react-redux';
-import { flipMenu } from '../store/reducer/headerReducer';
+import { flipMenu } from '../store/headerSlice';
 import { useNavigate } from 'react-router-dom';
 const ModalMenuLogged = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const ModalMenuLogged = () => {
 
   return (
     <>
-      <div className="containerMenu">
+      <div className='containerMenu'>
         <ButtonModal
           setClick={() => {
             handleNavigate();

@@ -1,11 +1,7 @@
-import '../styles/components/HostGradient.scss'
+import '../styles/components/HostGradient.scss';
 
 const HostGradient = ({ children }) => {
-    return (
-        <div className='HostGradient'>
-            {children}
-        </div>
-    )
-}
+  return <div className='HostGradient'>{children}</div>;
+};
 
 export default HostGradient;

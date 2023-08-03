@@ -1,23 +1,23 @@
-import "../styles/components/stickyCalendarModal.scss";
-import "../styles/components/amenities.scss";
-import RentCalendarBtn from "./RentCalendarBtn";
-import AmenitieTag from "./AmenitieTag";
-import { RangeCalendar } from "@mantine/dates";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { changeDate, changeNights } from "../store/reducer/calendarReducer";
+import '../styles/components/stickyCalendarModal.scss';
+import '../styles/components/amenities.scss';
+import RentCalendarBtn from './RentCalendarBtn';
+import AmenitieTag from './AmenitieTag';
+import { RangeCalendar } from '@mantine/dates';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeDate, changeNights } from '../store/calendarSlice';
 
 const StickyCalendarModal = ({ opened, setOpened }) => {
-  const rentCalendarOne = useSelector((state) => state.calendarReducer.dates);
-  const nights = useSelector((state) => state.calendarReducer.nights);
+  const rentCalendarOne = useSelector((state) => state.calendar.dates);
+  const nights = useSelector((state) => state.calendar.nights);
 
   const dispatch = useDispatch();
-  const [dateTitle, setTitle] = useState("Selecciona las fechas");
+  const [dateTitle, setTitle] = useState('Selecciona las fechas');
   const [dateHeader, setdateHeader] = useState(
-    "Ingresa tus fechas de viaje para ver el precio exacto"
+    'Ingresa tus fechas de viaje para ver el precio exacto'
   );
 
-  const [texDate, setTextDate] = useState(["Agregar fecha", "Agregar fecha"]);
+  const [texDate, setTextDate] = useState(['Agregar fecha', 'Agregar fecha']);
 
   const clearCalendar = () => {
     dispatch(changeDate([null, null]));
@@ -25,13 +25,13 @@ const StickyCalendarModal = ({ opened, setOpened }) => {
   };
   const textDateHeader = () => {
     if (rentCalendarOne[0] === null && rentCalendarOne[1] === null) {
-      setTitle("Selecciona las fechas");
-      setdateHeader("Ingresa tus fechas de viaje para ver el precio exacto");
-      setTextDate(["Agregar fecha", "Agregar fecha"]);
+      setTitle('Selecciona las fechas');
+      setdateHeader('Ingresa tus fechas de viaje para ver el precio exacto');
+      setTextDate(['Agregar fecha', 'Agregar fecha']);
     } else if (rentCalendarOne[0] && rentCalendarOne[1] === null) {
       const date1 = `${rentCalendarOne[0].getMonth()}/${rentCalendarOne[0].getDate()}/${rentCalendarOne[0].getFullYear()}`;
-      setTextDate([date1, "Agregar fecha"]);
-      setdateHeader("Estancia mínima: 2 noches");
+      setTextDate([date1, 'Agregar fecha']);
+      setdateHeader('Estancia mínima: 2 noches');
     } else if (rentCalendarOne[0] && rentCalendarOne[1]) {
       if (rentCalendarOne[0] && rentCalendarOne[1]) {
         let rentDates =
@@ -67,20 +67,20 @@ const StickyCalendarModal = ({ opened, setOpened }) => {
 
   return (
     <div>
-      <div className="stickRentCalendar">
-        <div className="headerContainer">
-          <div className="sectionHeader">
-            <div className="dateTitle" children={dateTitle} />
-            <div className="dateHeader" children={dateHeader} />
+      <div className='stickRentCalendar'>
+        <div className='headerContainer'>
+          <div className='sectionHeader'>
+            <div className='dateTitle' children={dateTitle} />
+            <div className='dateHeader' children={dateHeader} />
           </div>
-          <div className="section">
-            <div className="checkFlexI">
-              <div className="check">LLEGADA</div>
-              <div className="checkText">{texDate[0]}</div>
+          <div className='section'>
+            <div className='checkFlexI'>
+              <div className='check'>LLEGADA</div>
+              <div className='checkText'>{texDate[0]}</div>
             </div>
-            <div className="checkFlexI" id="i2">
-              <div className="check">SALIDA</div>
-              <div className="checkText">{texDate[1]}</div>
+            <div className='checkFlexI' id='i2'>
+              <div className='check'>SALIDA</div>
+              <div className='checkText'>{texDate[1]}</div>
             </div>
           </div>
         </div>
@@ -95,25 +95,25 @@ const StickyCalendarModal = ({ opened, setOpened }) => {
             }}
             styles={(theme) => ({
               day: {
-                "&[data-selected]": {
+                '&[data-selected]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  position: "relative",
+                  position: 'relative',
                 },
 
-                "&[data-in-range]": {
+                '&[data-in-range]': {
                   backgroundColor: theme.colors.gray[2],
                 },
 
-                "&[data-first-in-range]": {
+                '&[data-first-in-range]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  position: "relative",
+                  position: 'relative',
 
-                  "&::after": {
+                  '&::after': {
                     content: '""',
                     backgroundColor: theme.colors.gray[2],
-                    position: "absolute",
+                    position: 'absolute',
                     right: 0,
                     left: 20,
                     top: 0,
@@ -122,13 +122,13 @@ const StickyCalendarModal = ({ opened, setOpened }) => {
                   },
                 },
 
-                "&[data-last-in-range]": {
+                '&[data-last-in-range]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  "&::after": {
+                  '&::after': {
                     content: '""',
                     backgroundColor: theme.colors.gray[2],
-                    position: "absolute",
+                    position: 'absolute',
                     left: 0,
                     right: 20,
                     top: 0,
@@ -140,24 +140,24 @@ const StickyCalendarModal = ({ opened, setOpened }) => {
             })}
           />
         </div>
-        <div className="rentCalendarBtns">
+        <div className='rentCalendarBtns'>
           <button>
             <AmenitieTag
               svgPath={
-                "M29 5a2 2 0 0 1 1.995 1.85L31 7v18a2 2 0 0 1-1.85 1.995L29 27H3a2 2 0 0 1-1.995-1.85L1 25V7a2 2 0 0 1 1.85-1.995L3 5zm0 2H3v18h26zm-8 13v2H11v-2zm3-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm16-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                'M29 5a2 2 0 0 1 1.995 1.85L31 7v18a2 2 0 0 1-1.85 1.995L29 27H3a2 2 0 0 1-1.995-1.85L1 25V7a2 2 0 0 1 1.85-1.995L3 5zm0 2H3v18h26zm-8 13v2H11v-2zm3-5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm16-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z'
               }
-              amenitie={""}
+              amenitie={''}
             />
           </button>
           <div>
             <RentCalendarBtn
-              clase={"clearDate"}
-              texto={"Borrar fechas"}
+              clase={'clearDate'}
+              texto={'Borrar fechas'}
               evnt={clearCalendar}
             />
             <RentCalendarBtn
-              clase={"closeBt"}
-              texto={"Cerrar"}
+              clase={'closeBt'}
+              texto={'Cerrar'}
               evnt={() => setOpened((o) => !o)}
             />
           </div>

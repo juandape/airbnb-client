@@ -1,0 +1,33 @@
+.rentComments {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rentComments .comment {
+  width: 50%;
+}
+
+.commentContainer {
+  margin-bottom: 40px;
+}
+
+.userContainerflex {
+  display: flex;
+  margin-bottom: 16px;
+}
+.userContainerflex .profileImg img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+  vertical-align: bottom;
+}
+.userContainerflex .user {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.userContainerflex .user .commentDate {
+  color: #717171;
+}/*# sourceMappingURL=comment.css.map */

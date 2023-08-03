@@ -11,12 +11,12 @@ const CardHomeClientContainer = () => {
   const getReservations = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.REACT_APP_AIRBACK}/user/`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/user`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        },
+        }
       );
       setReservations(data.data.reservations);
       setLoading(false);
@@ -34,7 +34,7 @@ const CardHomeClientContainer = () => {
     return <p>loading</p>;
   }
   return (
-    <div className="CardHomeContainer">
+    <div className='CardHomeContainer'>
       {reservations.length === 0 ? (
         <h1>
           No se encontraron reservas, que esperar para programar tu primer

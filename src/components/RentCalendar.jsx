@@ -1,23 +1,23 @@
-import "../styles/components/rentCalendar.scss";
-import "../styles/components/amenities.scss";
-import RentCalendarBtn from "./RentCalendarBtn";
-import AmenitieTag from "./AmenitieTag";
-import { RangeCalendar } from "@mantine/dates";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import '../styles/components/rentCalendar.scss';
+import '../styles/components/amenities.scss';
+import RentCalendarBtn from './RentCalendarBtn';
+import AmenitieTag from './AmenitieTag';
+import { RangeCalendar } from '@mantine/dates';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   changeDate,
   changeTitle,
   changeDateHead,
   changeNights,
-} from "../store/reducer/calendarReducer";
+} from '../store/calendarSlice';
 
 const RentCalendar = () => {
-  const rentCalendarOne = useSelector((state) => state.calendarReducer.dates);
-  const nights = useSelector((state) => state.calendarReducer.nights);
+  const rentCalendarOne = useSelector((state) => state.calendar.dates);
+  const nights = useSelector((state) => state.calendar.nights);
   const dispatch = useDispatch();
-  const dateTitle = useSelector((state) => state.calendarReducer.title);
-  const dateHeader = useSelector((state) => state.calendarReducer.head);
+  const dateTitle = useSelector((state) => state.calendar.title);
+  const dateHeader = useSelector((state) => state.calendar.head);
 
   //const [rentCalendarOne, setRentCalendarOne] = useState([null,null]);
   //const [dateTitle, setDateTitle] = useState("")
@@ -29,13 +29,13 @@ const RentCalendar = () => {
   };
   const textDateHeader = () => {
     if (rentCalendarOne[0] === null && rentCalendarOne[1] === null) {
-      dispatch(changeTitle("Selecciona tu fecha de llegada"));
+      dispatch(changeTitle('Selecciona tu fecha de llegada'));
       dispatch(
-        changeDateHead("Ingresa tus fechas de viaje para ver el precio exacto")
+        changeDateHead('Ingresa tus fechas de viaje para ver el precio exacto')
       );
     } else if (rentCalendarOne[0] && rentCalendarOne[1] === null) {
-      dispatch(changeTitle("Selecciona la fecha de salida"));
-      dispatch(changeDateHead("Estancia mínima: 2 noches"));
+      dispatch(changeTitle('Selecciona la fecha de salida'));
+      dispatch(changeDateHead('Estancia mínima: 2 noches'));
     } else if (rentCalendarOne[0] && rentCalendarOne[1]) {
       if (rentCalendarOne[0] && rentCalendarOne[1]) {
         let rentDates =
@@ -57,9 +57,9 @@ const RentCalendar = () => {
 
   return (
     <div>
-      <div className="rentCalendar">
-        <div className="dateTitle" children={dateTitle} />
-        <div className="dateHeader" children={dateHeader} />
+      <div className='rentCalendar'>
+        <div className='dateTitle' children={dateTitle} />
+        <div className='dateHeader' children={dateHeader} />
         <div>
           <RangeCalendar
             minDate={new Date()}
@@ -68,25 +68,25 @@ const RentCalendar = () => {
             onChange={(e) => dispatch(changeDate(e))}
             styles={(theme) => ({
               day: {
-                "&[data-selected]": {
+                '&[data-selected]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  position: "relative",
+                  position: 'relative',
                 },
 
-                "&[data-in-range]": {
+                '&[data-in-range]': {
                   backgroundColor: theme.colors.gray[2],
                 },
 
-                "&[data-first-in-range]": {
+                '&[data-first-in-range]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  position: "relative",
+                  position: 'relative',
 
-                  "&::after": {
+                  '&::after': {
                     content: '""',
                     backgroundColor: theme.colors.gray[2],
-                    position: "absolute",
+                    position: 'absolute',
                     right: 0,
                     left: 20,
                     top: 0,
@@ -95,13 +95,13 @@ const RentCalendar = () => {
                   },
                 },
 
-                "&[data-last-in-range]": {
+                '&[data-last-in-range]': {
                   backgroundColor: theme.colors.dark[4],
                   borderRadius: 100,
-                  "&::after": {
+                  '&::after': {
                     content: '""',
                     backgroundColor: theme.colors.gray[2],
-                    position: "absolute",
+                    position: 'absolute',
                     left: 0,
                     right: 20,
                     top: 0,
@@ -113,13 +113,11 @@ const RentCalendar = () => {
             })}
           />
         </div>
-        <div className="rentCalendarBtns">
-          <button>
-            
-          </button>
+        <div className='rentCalendarBtns'>
+          <button></button>
           <RentCalendarBtn
-            clase={"clearDate"}
-            texto={"Borrar fechas"}
+            clase={'clearDate'}
+            texto={'Borrar fechas'}
             evnt={clearCalendar}
           />
         </div>

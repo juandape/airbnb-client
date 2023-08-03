@@ -1,0 +1,11 @@
+.HostGradient {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 30px;
+  padding-left: 80px;
+  background: rgb(87, 6, 158);
+  background: linear-gradient(90deg, rgb(87, 6, 158) 0%, rgb(143, 11, 105) 52%, rgb(255, 0, 130) 100%);
+}/*# sourceMappingURL=HostGradient.css.map */

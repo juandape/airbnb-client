@@ -1,8 +1,8 @@
-import RentMap from "./RentMap";
-import "../styles/components/rentLocation.scss";
+import RentMap from './RentMap';
+import '../styles/components/rentLocation.scss';
 
 const RentLocation = ({ randomNumber, location }) => {
-  let textDesc = "";
+  let textDesc = '';
   if (randomNumber === 1) {
     textDesc = {
       text1: `Hemos creado un espacio unico que te permitira vivir una
@@ -28,14 +28,14 @@ const RentLocation = ({ randomNumber, location }) => {
     textDesc = `a 500 mts podras encontrar el rio, donde podras realizar picnic y darte un chapuzon. tambien podrás encontrar cafés rurales. Y en la avenida principal a 2.5 km podrás encontrar todo tipo de restaurantes`;
   }
   return (
-    <div className="rentLocationContainer">
-      <div className="rentLocationTitle">
+    <div className='rentLocationContainer'>
+      <div className='rentLocationTitle'>
         <h2>Dónde vas a estar</h2>
       </div>
       <RentMap location={location} />
-      <div className="rentLocationInfo">
+      <div className='rentLocationInfo'>
         <h3>{location.city}</h3>
-        <div className="rentLocationDesc">
+        <div className='rentLocationDesc'>
           <span>{textDesc}</span>
         </div>
       </div>
