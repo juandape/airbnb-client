@@ -49,7 +49,7 @@ El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades q
 - [x] Crear un repositorio en GitHub para cada uno de los proyectos (client y server). Este repositorio debe ser publico y debe tener como colaboradores a los instructores del curso. El nombre del repositorio debe ser `airbnb-<client o server>`.
 - [x] Ejecutar el proyecto en tu computador y familiarizarte con el código (debes buscar las variables de entorno necesarias para poder ejecutar tu código).
 - [x] Adicionar reglas de ESLint al proyecto (airbnb, standarjs) y correr el linter para que el codigo siga esas reglas.
-- [ ] Migrar el Router a la version 6.4 y utilizar [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
+- [x] Migrar el Router a la version 6.4 y utilizar [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
 - [x] Migrar uso de redux a redux-toolkit.
 - [x] Modificar la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules), la vista en clases.
 - [x] Implementar pasarela de pagos Stripe
