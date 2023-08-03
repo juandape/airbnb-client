@@ -22,6 +22,9 @@ https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170
 - Places API
 - Maps javascript API
 - Geocoding API
+- Vite
+- Stripe
+
 
 ### Backend
 
@@ -30,19 +33,32 @@ https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170
 - Mongoose
 - MongoDB
 - bcrypt
-- busboy
+- multer
 - morgan
 - dotenv
 - cors
 - nodemailer
 - cloudinary
 - jsonwebtoken
+- Swagger
 
-## Database
+## Vercel URL
 
-<img src="./.img/model.png">
+https://airbnbcloneclient.vercel.app
 
-## El trabajo que te toca hacer
+## Repositorio Backend
+
+https://github.com/juandape/airbnb-server.git
+
+## Render URL
+
+https://airbnbcloneserver.onrender.com
+
+## Documantacion Swagger
+
+https://airbnbcloneserver.onrender.com/api/v1/docs/
+
+## Cambios a realizar en el proyecto
 
 El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades que no están implementadas y existen algunas desiciones tecnicas que no fueron las mas acertadas. Tu trabajo es implementar las siguientes funcionalidades:
 
