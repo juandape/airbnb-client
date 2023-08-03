@@ -173,8 +173,7 @@ const HostForm = () => {
       console.log(result);
 
       const amenities = dataTranser[1].map((item) => item.value);
-      const imageUrls = result.map(image => image.url)
-
+      const imageUrls = result.map((image) => image.url);
 
       data.append('hometype', homeType.current.value);
       data.append('location', locationResult);
@@ -200,7 +199,7 @@ const HostForm = () => {
       ]);
 
       const res = await axios.post(
-        `${import.meta.env.VITE_APP_AIRBACK}/homes`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/homes`,
         data,
         {
           headers: {

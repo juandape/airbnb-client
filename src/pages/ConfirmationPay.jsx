@@ -24,7 +24,7 @@ const ConfirmationPay = () => {
       e.preventDefault();
       console.log('reserva despues del click', reserve);
       const res = await axios.post(
-        `${import.meta.env.VITE_APP_AIRBACK}/reservations/create`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/reservations/create`,
         reserve,
         {
           headers: {

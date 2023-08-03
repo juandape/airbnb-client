@@ -7,7 +7,7 @@ import { flipMenu } from '../store/headerSlice';
 import Swal from 'sweetalert2';
 
 const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
-const url = `${BASE_URL}/user/signin`;
+const url = `${BASE_URL}/api/user/signin`;
 
 const ModalLogin = ({ setExpired }) => {
   const dispatch = useDispatch();

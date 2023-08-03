@@ -18,7 +18,7 @@ const HostingListingEditing = () => {
   const getHome = async () => {
     try {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_APP_AIRBACK}/homes/${params.id}`
+        `${import.meta.env.VITE_APP_AIRBACK}/api/homes/${params.id}`
       );
       setHome(data.data);
       setLoading(false);

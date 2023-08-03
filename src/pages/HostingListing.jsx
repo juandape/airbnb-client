@@ -12,7 +12,7 @@ const HostingListing = () => {
   const getHomes = async () => {
     try {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_APP_AIRBACK}/homes/listings`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/homes/listings`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

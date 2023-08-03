@@ -35,7 +35,7 @@ const Payment = ({ className, invoice, price, name }) => {
       };
 
       const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
-      const response = await fetch(`${BASE_URL}/payments`, payload);
+      const response = await fetch(`${BASE_URL}/api/payments`, payload);
       const data = await response.json();
       console.log(
         '🚀 ~ file: Checkoutform.jsx:46 ~ handleSubmit ~ data:',

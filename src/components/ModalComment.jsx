@@ -41,7 +41,7 @@ const ModalComment = ({ id, set, state }) => {
 
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_APP_AIRBACK}/comments/${id}`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/comments/${id}`,
         dataSend,
         {
           headers: {

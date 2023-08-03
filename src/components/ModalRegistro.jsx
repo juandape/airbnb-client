@@ -19,7 +19,7 @@ const ModalRegistro = () => {
   const dispatch = useDispatch();
 
   const BASE_URL = import.meta.env.VITE_APP_AIRBACK;
-  const url = `${BASE_URL}/user/signup`;
+  const url = `${BASE_URL}/api/user/signup`;
 
   const HandleCalendar = (e) => {
     setCalendar(e);

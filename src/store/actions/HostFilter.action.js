@@ -18,7 +18,7 @@ export const getPosts = (token) => {
     try {
       dispatch(reserveLoading(true));
       const { data } = await axios.get(
-        `${import.meta.env.VITE_APP_AIRBACK}/reservations/showHost`,
+        `${import.meta.env.VITE_APP_AIRBACK}/api/reservations/showHost`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

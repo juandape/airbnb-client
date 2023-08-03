@@ -24,7 +24,7 @@ const RentElement = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_APP_AIRBACK}/homes/${params.id}`)
+      .get(`${import.meta.env.VITE_APP_AIRBACK}/api/homes/${params.id}`)
       .then((response) => {
         setItem(response.data.data);
         setRandomNumber(Math.floor(Math.random() * 5 + 1));
