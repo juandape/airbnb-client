@@ -1,7 +1,7 @@
 import ButtonRound from './ButtonModal';
 import '../styles/components/CalendarSearch.scss';
 import '../styles/components/ButtonModal.scss';
-import { RangeCalendar } from '@mantine/dates';
+import { RangeCalendar }  from '@mantine/dates';
 import { changeDate, changeFlexRange } from '../store/calendarSlice';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
