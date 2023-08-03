@@ -235,8 +235,16 @@ const HostForm = () => {
   return (
     <div className='hostform'>
       <div className='hostform__gradient'>
-        <HostGradient>Listo para convertirte en anfitrión?</HostGradient>
+        <HostGradient>
+          Listo para convertirte en anfitrión?
+        </HostGradient>
       </div>
+          <button
+            onClick={() => navigate('/')}
+            className='back--button'
+          >
+            {'<-' + ' '} Back to Home
+          </button>
       <form onSubmit={handleSubmit} className='hostform__form'>
         <h1 className='hostform__h1'>Sólo es necesario un par de pasos ...</h1>
         <label>

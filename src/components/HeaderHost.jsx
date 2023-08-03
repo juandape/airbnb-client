@@ -48,7 +48,7 @@ const HeaderHost = () => {
     <>
       <div className='headerhost'>
         <div>
-          <Link to='/hosting' className='header__logo'>
+          <Link to='/' className='header__logo'>
             <svg
               viewBox='0 0 1991.3 2143.2'
               xmlns='http://www.w3.org/2000/svg'
