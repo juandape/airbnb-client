@@ -1,6 +1,6 @@
 import '../styles/pages/Home.scss';
 import CardMain from '../components/CardMain';
-import ButtonMapa from '../components/ButtonMapa';
+// import ButtonMapa from '../components/ButtonMapa';
 import Footer from '../components/Footer';
 import FooterTouch from '../components/FooterToch';
 import Header from '../components/Header';
@@ -48,7 +48,7 @@ const Home = () => {
               );
             })}
       </div>
-      <ButtonMapa />
+      {/* <ButtonMapa /> */}
       <Footer />
       <FooterTouch />
     </div>
