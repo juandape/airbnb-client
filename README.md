@@ -6,7 +6,7 @@ Se recibe un MVP terminado, un clon de la plataforma Airbnb, para cambiar cierta
 
 ## Video presentación
 
-<!-- https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170 -->
+https://youtu.be/lKf8em7e6lI
 
 ## Tecnologías
 
@@ -37,7 +37,7 @@ Se recibe un MVP terminado, un clon de la plataforma Airbnb, para cambiar cierta
 - morgan
 - dotenv
 - cors
-- nodemailer
+- resend
 - cloudinary
 - jsonwebtoken
 - Swagger
