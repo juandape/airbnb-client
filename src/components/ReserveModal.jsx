@@ -93,7 +93,7 @@ const ReserveModal = ({ setOpenReserve, item, dates, guest }) => {
         ) : (
           <form onSubmit={handleSubmit} className='reserveContainer'>
             <div className='title'>
-              <h1>Confirmar y Pagar</h1>
+              <h1>Confirma y Paga tu Estadía</h1>
             </div>
             <div className='subTitle'>
               <h2>Tu Viaje</h2>

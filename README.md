@@ -1,12 +1,12 @@
-### Airbnb clone
+### Airbnb clone legacy project
 
 ## Descripción
 
-El airbnb es una plataforma de alquiler de viviendas, apartamentos y habitaciones. Los usuarios pueden buscar y reservar alojamiento en más de 190 países.
+Se recibe un MVP terminado, un clon de la plataforma Airbnb, para cambiar ciertas funcionalidades y hacerle algunas actualizaciones.
 
 ## Video presentación
 
-https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170
+<!-- https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170 -->
 
 ## Tecnologías
 
@@ -15,7 +15,7 @@ https://youtu.be/Mdq2s9HLf00?list=PLxyfMWnjW2ktsDlYU7KVJltXGfHvXVGBE&t=3170
 - React
 - React Router
 - SASS
-- Redux
+- Redux toolkit
 - Axios
 - Mantine
 - sweetalert2

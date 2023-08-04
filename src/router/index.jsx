@@ -53,6 +53,10 @@ const router = createBrowserRouter([
 
       },
       {
+        path: 'confirmationPay',
+        element: <ConfirmationPay />
+      },
+      {
         path: 'trips',
         element: <ClientTrips />
       },

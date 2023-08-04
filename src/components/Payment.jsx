@@ -9,7 +9,6 @@ const Payment = ({ className, invoice, price, name }) => {
   const stripe = useStripe();
   const elements = useElements();
   const handleNavigate = () => {
-    navigate('/confirmationPay');
   };
   let params = useParams();
   // var handler = window.ePayco.checkout.configure({
@@ -40,17 +39,18 @@ const Payment = ({ className, invoice, price, name }) => {
       console.log(
         '🚀 ~ file: Checkoutform.jsx:46 ~ handleSubmit ~ data:',
         data
-      );
+        );
 
-      elements.getElement(CardElement).clear();
+        elements.getElement(CardElement).clear();
 
-      if (response.status === 200) {
-        Swal.fire({
-          icon: 'info',
+        if (response.status === 200) {
+          Swal.fire({
+            icon: 'info',
           html: '<h2>Payment Successful !</h2>' +
           `<div>Your reserve in ${name} is ready</div>`
         });
-        navigate('/');
+        navigate('/confirmationPay');
+        // navigate('/');
       }
       if (error === 'card_declined') {
         return Swal.fire('payment failed', 'Please check your card details');

@@ -75,10 +75,10 @@ const ConfirmationPay = () => {
         ) : (
           <div className='reserveContainer'>
             <div className='title'>
-              <h1>Falta poco para Reservar</h1>
+              <h1>Tu reserva esta Lista!!</h1>
             </div>
             <div className='subTitle'>
-              <h2>Tu viaje</h2>
+              <h2>Esperamos que disfrutes tu estadía</h2>
             </div>
             <div className='dates'>
               <div className='flexContainer'>
@@ -116,7 +116,7 @@ const ConfirmationPay = () => {
                   className={'reserveBtn'}
                   onClick={handleSubmit}
                 >
-                  <span className='reserveIt'>reservar</span>
+                  <span className='reserveIt'>Finalizar</span>
                 </button>
               </div>
             </div>

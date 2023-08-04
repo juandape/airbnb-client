@@ -5,6 +5,20 @@ const FooterRent = () => {
   return (
     <div className='footerRentContainer'>
       <div className='footerTitle'>
+        <h3>Legacy Project realizado por:</h3>
+      </div>
+      <div className='footerFlex'>
+        <DevInfo
+          profileImg={'https://res.cloudinary.com/dahm4ko9b/image/upload/v1691162172/upload-folder/Imagen1_hpsrqa.jpg'}
+          name={'Juan David Peña'}
+          gitHub={'https://github.com/juandape'}
+          linkedIn={
+            'https://linkedin.com/in/juan-david-peña-23936627b'
+          }
+        />
+      </div>
+
+      <div className='footerTitle'>
         <h3>Desarrollado por:</h3>
       </div>
       <div className='footerFlex'>
