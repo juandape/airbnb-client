@@ -1,8 +1,8 @@
-### Airbnb clone legacy project
+### Airbnb clone legacy project Make it Real
 
 ## Descripción
 
-Se recibe un MVP terminado, un clon de la plataforma Airbnb, para cambiar ciertas funcionalidades y hacerle algunas actualizaciones.
+Se recibe un MVP terminado, un clon de la plataforma Airbnb, para cambiar ciertas funcionalidades y hacerle algunas actualizaciones y mejoras.
 
 ## Video presentación
 
@@ -58,18 +58,15 @@ https://airbnbcloneserver.onrender.com
 
 https://airbnbcloneserver.onrender.com/api/v1/docs/
 
-## Cambios a realizar en el proyecto
+## Cambios realizados en el MVP
 
-El proyecto es un MVP que ya está terminado, pero hay algunas funcionalidades que no están implementadas y existen algunas desiciones tecnicas que no fueron las mas acertadas. Tu trabajo es implementar las siguientes funcionalidades:
-
-- [x] Crear un repositorio en GitHub para cada uno de los proyectos (client y server). Este repositorio debe ser publico y debe tener como colaboradores a los instructores del curso. El nombre del repositorio debe ser `airbnb-<client o server>`.
-- [x] Ejecutar el proyecto en tu computador y familiarizarte con el código (debes buscar las variables de entorno necesarias para poder ejecutar tu código).
-- [x] Adicionar reglas de ESLint al proyecto (airbnb, standarjs) y correr el linter para que el codigo siga esas reglas.
-- [x] Migrar el Router a la version 6.4 y utilizar [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
-- [x] Migrar uso de redux a redux-toolkit.
-- [x] Modificar la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules), la vista en clases.
-- [x] Implementar pasarela de pagos Stripe
-- [x] Modificar la carga de imagenes desde el backend haciendo uso de la libreria multer.
-- [x] Cambiar plataforma de envío de correos de nodemailer a resend
-- [x] Documentar backend usando swagger
-- [ ] Modificar la carpeta de componentes para que tenga el test y el componente, es decir, debes agregar test unitarios a todos los componentes.
+- Generación de nuevas variables de entorno necesarias para la ejecución del código.
+- Migración del proyecto a Vite.
+- Adición de reglas ESLint al proyecto (airbnb, standarjs).
+- Migración de React Router a la version 6.4 y uso del componente [`createbrowserrouter`](https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter)
+- Migración de redux a redux-toolkit.
+- Modificación  de la estructura de carpetas del backend para seguir la convencion basada en [domain modules](https://alexkondov.com/tao-of-node/#structure-in-modules).
+- Implementación de la pasarela de pagos Stripe
+- Modificación de la carga de imagenes desde el backend haciendo uso de la libreria multer.
+- Cambio de plataforma de envío de correos de nodemailer a resend
+- Documentación del backend usando swagger
